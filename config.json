@@ -1,0 +1,20 @@
+{
+  "slug": "purescript",
+  "language": "PureScript",
+  "repository": "https://github.com/exercism/xpurescript",
+  "active": false,
+  "test_pattern": "TODO",
+  "problems": [
+
+  ],
+  "deprecated": [
+
+  ],
+  "ignored": [
+    "bin",
+    "docs"
+  ],
+  "foregone": [
+
+  ]
+}
