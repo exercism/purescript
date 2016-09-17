@@ -16,3 +16,6 @@ The MIT License (MIT)
 
 Copyright (c) 2016 Katrina Owen, _@kytrinyx.com
 
+### Purescript icon
+The PureScript logo was created by Gareth Hughes, and is licensed under the [Creative Commons Attribution 4.0 license](https://creativecommons.org/licenses/by/4.0/).
+We have adapted it, changing the colour scheme, for use on Exercism.
