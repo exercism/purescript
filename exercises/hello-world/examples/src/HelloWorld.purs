@@ -1,4 +1,4 @@
-module Main where
+module HelloWorld where
 
 import Prelude
 import Data.Maybe (Maybe(Just, Nothing))
