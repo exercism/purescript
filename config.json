@@ -3,9 +3,14 @@
   "language": "PureScript",
   "repository": "https://github.com/exercism/xpurescript",
   "active": false,
-  "test_pattern": "TODO",
-  "problems": [
-
+  "exercises": [
+    {
+      "slug": "hello-world",
+      "difficulty": 1,
+      "topics": [
+        "maybe"
+      ]
+    }
   ],
   "deprecated": [
 
