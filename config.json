@@ -12,6 +12,13 @@
       ]
     },
     {
+      "slug": "leap",
+      "difficulty": 1,
+      "topics": [
+        "modulo"
+      ]
+    },
+    {
       "slug": "raindrops",
       "difficulty": 1,
       "topics": [

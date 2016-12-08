@@ -1,0 +1,16 @@
+{
+  "name": "leap",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "output"
+  ],
+  "dependencies": {
+    "purescript-prelude": "^2.1.0"
+  },
+  "devDependencies": {
+    "purescript-psci-support": "^2.0.0",
+    "purescript-test-unit": "^10.0.1"
+  }
+}
