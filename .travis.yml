@@ -10,4 +10,4 @@ install:
 script:
   - bin/fetch-configlet
   - bin/configlet .
-  - bin/build.sh
+  - bin/test.sh
