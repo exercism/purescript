@@ -10,6 +10,13 @@
       "topics": [
         "maybe"
       ]
+    },
+    {
+      "slug": "raindrops",
+      "difficulty": 1,
+      "topics": [
+        "modulo"
+      ]
     }
   ],
   "deprecated": [
