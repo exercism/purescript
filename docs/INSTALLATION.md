@@ -6,3 +6,7 @@ and running, enter this command into the terminal to install the Purescript
 compiler, the Pulp build tool and the Bower package manager.
 
     npm install --global purescript pulp bower
+
+More information can be found in [the Purescript repository][ps-repo]
+
+[ps-repo]: (https://github.com/purescript/purescript/blob/master/INSTALL.md).
