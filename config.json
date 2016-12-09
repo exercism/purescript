@@ -17,6 +17,14 @@
       "topics": [
         "modulo"
       ]
+    },
+    {
+      "slug": "pangram",
+      "difficulty": 1,
+      "topics": [
+        "strings",
+        "chars"
+      ]
     }
   ],
   "deprecated": [
