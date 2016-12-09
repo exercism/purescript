@@ -11,3 +11,7 @@ script:
   - bin/fetch-configlet
   - bin/configlet .
   - bin/test.sh
+
+cache:
+  directories:
+  - $HOME/.cache/bower/
