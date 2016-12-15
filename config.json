@@ -41,6 +41,15 @@
       ]
     },
     {
+      "slug": "accumulate",
+      "difficulty": 1,
+      "topics": [
+        "recursion",
+        "type variables",
+        "pattern matching"
+      ]
+    },
+    {
       "slug": "acronym",
       "difficulty": 2,
       "topics": [

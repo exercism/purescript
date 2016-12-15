@@ -1,0 +1,3 @@
+module Accumulate
+  ( accumulate
+  ) where
