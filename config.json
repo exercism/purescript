@@ -19,6 +19,13 @@
       ]
     },
     {
+      "slug": "bob",
+      "difficulty": 1,
+      "topics": [
+        "strings"
+      ]
+    },
+    {
       "slug": "raindrops",
       "difficulty": 1,
       "topics": [
