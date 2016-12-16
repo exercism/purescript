@@ -32,6 +32,14 @@
         "strings",
         "chars"
       ]
+    },
+    {
+      "slug": "acronym",
+      "difficulty": 2,
+      "topics": [
+        "strings",
+        "chars"
+      ]
     }
   ],
   "deprecated": [

@@ -1,0 +1,3 @@
+module Acronym
+  ( abbreviate
+  ) where
