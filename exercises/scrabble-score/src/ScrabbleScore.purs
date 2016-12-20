@@ -1,0 +1,3 @@
+module ScrabbleScore
+  ( scoreWord
+  ) where

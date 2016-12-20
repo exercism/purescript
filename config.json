@@ -41,6 +41,14 @@
       ]
     },
     {
+      "slug": "scrabble-score",
+      "difficulty": 1,
+      "topics": [
+        "strings",
+        "chars"
+      ]
+    },
+    {
       "slug": "accumulate",
       "difficulty": 1,
       "topics": [
