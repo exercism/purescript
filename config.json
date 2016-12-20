@@ -56,6 +56,14 @@
         "strings",
         "chars"
       ]
+    },
+    {
+      "slug": "triangle",
+      "difficulty": 2,
+      "topics": [
+        "algebraic data types",
+        "type classes"
+      ]
     }
   ],
   "deprecated": [
