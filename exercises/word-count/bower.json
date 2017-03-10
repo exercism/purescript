@@ -1,0 +1,17 @@
+{
+  "name": "word-count",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "output"
+  ],
+  "dependencies": {
+    "purescript-prelude": "^2.5.0",
+    "purescript-maps": "^2.1.2"
+  },
+  "devDependencies": {
+    "purescript-psci-support": "^2.0.0",
+    "purescript-test-unit": "^10.1.0"
+  }
+}
