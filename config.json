@@ -72,6 +72,13 @@
         "algebraic data types",
         "type classes"
       ]
+    },
+    {
+      "slug": "word-count",
+      "difficulty": 1,
+      "topics": [
+        "strings"
+      ]
     }
   ],
   "deprecated": [
