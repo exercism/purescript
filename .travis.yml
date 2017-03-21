@@ -15,3 +15,4 @@ script:
 cache:
   directories:
   - $HOME/.cache/bower/
+  - $HOME/.exercise_cache/
