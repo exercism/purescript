@@ -1,0 +1,18 @@
+{
+  "name": "atbash-cipher",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "output"
+  ],
+  "dependencies": {
+    "purescript-prelude": "^2.5.0",
+    "purescript-maps": "^2.1.2",
+    "purescript-unicode": "^2.0.2"
+  },
+  "devDependencies": {
+    "purescript-psci-support": "^2.0.0",
+    "purescript-test-unit": "^10.1.0"
+  }
+}
