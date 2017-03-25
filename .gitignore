@@ -6,9 +6,9 @@ bin/configlet.exe
 **/npm-debug.log
 
 # Purescript artifact directories
-**/bower_components/
+**/bower_components
 **/node_modules/
 **/.pulp-cache/
-**/output/
+**/output
 **/.psc*
 **/.psa*
