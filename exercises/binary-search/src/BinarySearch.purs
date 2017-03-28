@@ -1,0 +1,3 @@
+module BinarySearch
+  ( find
+  ) where
