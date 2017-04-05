@@ -1,0 +1,3 @@
+module Diamond
+   (rows
+   ) where

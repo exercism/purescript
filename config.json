@@ -129,6 +129,13 @@
       "topics": [
         "arithmetics"
       ]
+    },
+    {
+      "slug": "diamond",
+      "difficulty": 1,
+      "topics": [
+        "strings"
+      ]
     }
   ],
   "deprecated": [
