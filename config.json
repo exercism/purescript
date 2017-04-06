@@ -108,6 +108,13 @@
         "maps",
         "bitwise operations"
       ]
+    },
+    {
+      "slug": "all-your-base",
+      "difficulty": 1,
+      "topics": [
+        "base conversion"
+      ]
     }
   ],
   "deprecated": [
