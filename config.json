@@ -152,6 +152,13 @@
         "strings",
         "maps"
       ]
+    },
+    {
+      "slug": "etl",
+      "difficulty": 1,
+      "topics": [
+        "maps"
+      ]
     }
   ],
   "deprecated": [
