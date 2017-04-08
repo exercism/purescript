@@ -115,6 +115,13 @@
       "topics": [
         "base conversion"
       ]
+    },
+    {
+      "slug": "binary-search",
+      "difficulty": 1,
+      "topics": [
+        "binary search"
+      ]
     }
   ],
   "deprecated": [
