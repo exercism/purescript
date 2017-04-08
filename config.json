@@ -122,6 +122,13 @@
       "topics": [
         "binary search"
       ]
+    },
+    {
+      "slug": "difference-of-squares",
+      "difficulty": 1,
+      "topics": [
+        "arithmetics"
+      ]
     }
   ],
   "deprecated": [
