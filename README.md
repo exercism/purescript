@@ -41,7 +41,7 @@ ambiguous problem description.
 #### Reviewing issues and pull requests
 
 If you have an opinion or feedback on work currently being done on this track
-please do [write a comment][write-comment] for an [issue][issue] or a
+please do [write a comment][write-comment] for an [issue][issues] or a
 [pull request][prs]. Feedback is extremely useful to us.
 
 [write-comment]: https://help.github.com/articles/commenting-on-a-pull-request/
