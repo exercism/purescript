@@ -43,8 +43,8 @@ done
 mv "$exercise_src" "$exercise_src.impl"
 mv "$exercise_examples_src" "$exercise_src"
 
-bower install
-pulp test
+time bower install
+time pulp test
 
 # capture result from last command (pulp test)
 if [[ $? == 0 ]]; then
