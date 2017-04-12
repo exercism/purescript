@@ -7,12 +7,12 @@
     "output"
   ],
   "dependencies": {
-    "purescript-prelude": "^2.5.0",
-    "purescript-maps": "^2.1.2",
-    "purescript-unicode": "^2.0.2"
+    "purescript-prelude": "^3.0.0",
+    "purescript-maps": "^3.0.0",
+    "purescript-unicode": "^3.0.1"
   },
   "devDependencies": {
-    "purescript-psci-support": "^2.0.0",
-    "purescript-test-unit": "^10.1.0"
+    "purescript-psci-support": "^3.0.0",
+    "purescript-test-unit": "^11.0.0"
   }
 }

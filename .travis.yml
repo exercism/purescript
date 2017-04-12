@@ -5,7 +5,7 @@ sudo: false
 install:
   - nvm install 6
   - nvm use 6
-  - npm install -g purescript@0.10.2 pulp bower
+  - npm install -g purescript@0.11.1 pulp@11.0.0 bower
 
 script:
   - bin/fetch-configlet

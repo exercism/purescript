@@ -2,7 +2,7 @@
 
 exercise_dir="$1"
 if [[ -z "$exercise_dir" ]]; then
-  echo "Usage: $BASH_SOURCE <exercise>" 
+  echo "Usage: $BASH_SOURCE <exercise>"
   exit 1
 fi
 
@@ -34,7 +34,7 @@ exercise_examples_src=examples/src
 
 # Setup Travis cache
 for dir in bower_components output; do
-  cache="$cache_dir/$exercise_dir/$dir"
+  cache="$cache_dir/$dir"
 
   mkdir -p "$cache"
   ln -f -s "$cache"
@@ -43,8 +43,8 @@ done
 mv "$exercise_src" "$exercise_src.impl"
 mv "$exercise_examples_src" "$exercise_src"
 
-bower install
-pulp test
+time bower install
+time pulp test
 
 # capture result from last command (pulp test)
 if [[ $? == 0 ]]; then
