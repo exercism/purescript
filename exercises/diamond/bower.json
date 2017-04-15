@@ -1,5 +1,5 @@
 {
-  "name": "pangram",
+  "name": "diamond",
   "ignore": [
     "**/.*",
     "node_modules",
@@ -8,7 +8,7 @@
   ],
   "dependencies": {
     "purescript-prelude": "^3.0.0",
-    "purescript-sets": "^3.0.0"
+    "purescript-enums": "^3.0.0"
   },
   "devDependencies": {
     "purescript-psci-support": "^3.0.0",
