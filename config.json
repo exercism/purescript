@@ -136,6 +136,14 @@
       "topics": [
         "strings"
       ]
+    },
+    {
+      "slug": "crypto-square",
+      "difficulty": 1,
+      "topics": [
+        "strings",
+        "matrices"
+      ]
     }
   ],
   "deprecated": [
