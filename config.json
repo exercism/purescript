@@ -144,6 +144,14 @@
         "strings",
         "matrices"
       ]
+    },
+    {
+      "slug": "isogram",
+      "difficulty": 1,
+      "topics": [
+        "strings",
+        "maps"
+      ]
     }
   ],
   "deprecated": [
