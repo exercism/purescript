@@ -159,6 +159,13 @@
       "topics": [
         "maps"
       ]
+    },
+    {
+      "slug": "largest-series-product",
+      "difficulty": 1,
+      "topics": [
+        "strings"
+      ]
     }
   ],
   "deprecated": [

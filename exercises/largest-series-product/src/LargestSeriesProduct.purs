@@ -1,0 +1,3 @@
+module LargestSeriesProduct
+  ( largestProduct
+  ) where
