@@ -166,6 +166,13 @@
       "topics": [
         "strings"
       ]
+    },
+    {
+      "slug": "pascals-triangle",
+      "difficulty": 1,
+      "topics": [
+        "arrays"
+      ]
     }
   ],
   "deprecated": [
