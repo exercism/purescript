@@ -73,11 +73,6 @@ explicitly described below.
 To fix a bug you should [create a pull request from a fork](https://help.github.com/articles/creating-a-pull-request-from-a-fork/) [here](https://github.com/exercism/xpurescript/pull). See also [here](https://github.com/exercism/x-common/blob/master/CONTRIBUTING.md#git-basics) for more information.
 
 
-## License
-
-The MIT License (MIT)
-
-Copyright (c) 2016 Katrina Owen, _@kytrinyx.com
 
 ### Purescript icon
 The PureScript logo was created by Gareth Hughes, and is licensed under the [Creative Commons Attribution 4.0 license](https://creativecommons.org/licenses/by/4.0/).
