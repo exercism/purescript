@@ -33,6 +33,13 @@
       ]
     },
     {
+      "slug": "hamming",
+      "difficulty": 1,
+      "topics": [
+        "Iterating over two lists at once"
+      ]
+    },
+    {
       "slug": "pangram",
       "difficulty": 1,
       "topics": [
