@@ -1,4 +1,4 @@
-# xpurescript
+# purescript
 
 Exercism problems in PureScript.
 
@@ -20,7 +20,7 @@ Thank you so much for contributing! :tada:
 When in doubt just [open a GitHub issue][new-issue] and ask! In any case,
 don't be afraid or shy! We promise to be friendly and as helpful as possible.
 
-[new-issue]: https://github.com/exercism/xpurescript/issues/new
+[new-issue]: https://github.com/exercism/purescript/issues/new
 
 
 ### How to contribute
@@ -45,8 +45,8 @@ please do [write a comment][write-comment] for an [issue][issues] or a
 [pull request][prs]. Feedback is extremely useful to us.
 
 [write-comment]: https://help.github.com/articles/commenting-on-a-pull-request/
-[issues]: https://github.com/exercism/xpurescript/issue
-[prs]: https://github.com/exercism/xpurescript/pull
+[issues]: https://github.com/exercism/purescript/issue
+[prs]: https://github.com/exercism/purescript/pull
 
 Please be detailed and include any links or arguments to support your
 opinion.
@@ -70,7 +70,7 @@ explicitly described below.
 
 
 ### Writing a pull request
-To fix a bug you should [create a pull request from a fork](https://help.github.com/articles/creating-a-pull-request-from-a-fork/) [here](https://github.com/exercism/xpurescript/pull). See also [here](https://github.com/exercism/x-common/blob/master/CONTRIBUTING.md#git-basics) for more information.
+To fix a bug you should [create a pull request from a fork](https://help.github.com/articles/creating-a-pull-request-from-a-fork/) [here](https://github.com/exercism/purescript/pull). See also [here](https://github.com/exercism/x-common/blob/master/CONTRIBUTING.md#git-basics) for more information.
 
 
 
