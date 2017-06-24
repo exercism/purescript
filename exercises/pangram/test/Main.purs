@@ -41,6 +41,6 @@ main = runTest do
       Assert.equal true $
         isPangram "\"Five quacking Zephyrs jolt my wax bed.\""
 
-    test "pangram with non ascii characters" do
-      Assert.equal true $
-        isPangram "Victor jagt zwölf Boxkämpfer quer über den großen Sylter Deich."
+    test "upper and lower case versions of the same character should not be counted separately" do
+      Assert.equal false $
+        isPangram "the quick brown fox jumped over the lazy FOX"
