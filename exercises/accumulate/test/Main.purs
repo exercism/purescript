@@ -5,7 +5,7 @@ import Control.Monad.Eff (Eff)
 import Test.Unit (suite, test)
 import Test.Unit.Main (runTest)
 import Test.Unit.Assert as Assert
-import Data.List (List, fromFoldable)
+import Data.List (List(Nil), fromFoldable)
 import Data.String as String
 import Accumulate (accumulate)
 
@@ -15,7 +15,7 @@ main = runTest do
   suite "Accumulate.accumulate" do
     test "empty accumulation" $
       let
-        emptyList = (fromFoldable [] :: List Int)
+        emptyList = (Nil :: List Int)
       in
         Assert.equal emptyList $
           accumulate square emptyList
