@@ -9,7 +9,7 @@ install:
 
 script:
   - bin/fetch-configlet
-  - bin/configlet .
+  - bin/configlet lint .
   - bin/test.sh
 
 cache:
