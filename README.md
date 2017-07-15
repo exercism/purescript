@@ -27,7 +27,7 @@ don't be afraid or shy! We promise to be friendly and as helpful as possible.
 
 As a first step we recommend you read the [contributing guide][cont-guide].
 
-[cont-guide]: https://github.com/exercism/x-common/blob/master/CONTRIBUTING.md
+[cont-guide]: https://github.com/exercism/docs/blob/master/contributing-to-language-tracks/README.md
 
 #### Reporting or fixing bugs
 
@@ -59,18 +59,18 @@ totally new exercise, but it might be a good idea to first discuss it in one
 of [our forums](#asking-for-help).
 
 [missing]: http://exercism.io/languages/purescript/todo
-[porting]: https://github.com/exercism/x-common/blob/master/CONTRIBUTING.md#porting-an-exercise-to-another-language-track
+[porting]: https://github.com/exercism/docs/blob/master/contributing-to-language-tracks/README.md#porting-an-exercise-to-another-language-track
 
 
 ### Repository structure and conventions
 
-[Here](https://github.com/exercism/x-common/blob/master/CONTRIBUTING.md#track-anatomy)
+[Here](https://github.com/exercism/docs/blob/master/contributing-to-language-tracks/README.md#track-anatomy)
 is a general description of all the files and directories that are not
 explicitly described below.
 
 
 ### Writing a pull request
-To fix a bug you should [create a pull request from a fork](https://help.github.com/articles/creating-a-pull-request-from-a-fork/) [here](https://github.com/exercism/purescript/pull). See also [here](https://github.com/exercism/x-common/blob/master/CONTRIBUTING.md#git-basics) for more information.
+To fix a bug you should [create a pull request from a fork](https://help.github.com/articles/creating-a-pull-request-from-a-fork/) [here](https://github.com/exercism/purescript/pull). See also [here](https://github.com/exercism/docs/blob/master/contributing-to-language-tracks/README.md#git-basics) for more information.
 
 
 
