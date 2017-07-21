@@ -1,7 +1,5 @@
 {
-  "slug": "purescript",
   "language": "PureScript",
-  "repository": "https://github.com/exercism/purescript",
   "active": false,
   "exercises": [
     {
