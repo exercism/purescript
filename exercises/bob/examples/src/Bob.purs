@@ -9,6 +9,7 @@ import Data.String.Regex as Regex
 import Data.String.Regex.Flags (noFlags)
 import Partial.Unsafe as Partial
 
+
 hey :: String -> String
 hey msg =
   if hasLetters msg && allUppercase msg then

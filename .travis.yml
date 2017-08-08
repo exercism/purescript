@@ -10,7 +10,7 @@ install:
 script:
   - bin/fetch-configlet
   - bin/configlet lint .
-  - bin/test.sh
+  - bin/test-changed.sh
 
 cache:
   directories:
