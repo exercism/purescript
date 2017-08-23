@@ -1,6 +1,6 @@
 {
   "language": "PureScript",
-  "active": false,
+  "active": true,
   "exercises": [
     {
       "uuid": "c41a2961-f7ca-4eaf-83cf-48762fc39c06",
