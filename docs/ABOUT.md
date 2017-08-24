@@ -1,16 +1,9 @@
-PureScript is a purely functional, statically-typed programming language with
-type inference.
+PureScript is a purely functional, statically-typed programming language with global type inference.
 
-**Functional** means that functions are first-class data types.
+**Functional** means that functions are first-class values. Functions are an important and powerful tool for abstraction. In PureScript, computation is modeled as the evaluation of expressions made up of function applications, rather than as the execution of a sequence of instructions.
 
-**Purely Functional** means (roughly) that there are no side effects.
-Every function will always return the same value for a given argument
-and will do nothing else.
+**Purely Functional** means that it is possible to tell if a computation has side-effects or not, meaning that if a computation changes a global variable, reads from input, writes to a socket, etc. it will be reflected in the type of the computation.
 
-**Statically-typed** means that identifiers have a type set at compile
-time--like those in Java, C++ or C#--instead of holding data of any
-type like those in Python, Ruby or JavaScript.
+**Statically-typed** means that all computations have a type that is known before running the program.
 
-**Type inference** means that the compiler will often figure out the
-type of an identifier by itself so you don't have to specify it.
-Scala and later versions of C# both do this.
+**Global type inference** means that the compiler can figure out the type of computations in the entire program without needing the programmer to specify the type.
