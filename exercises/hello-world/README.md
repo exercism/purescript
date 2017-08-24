@@ -13,6 +13,19 @@ The objectives are simple:
 - Submit your solution and check it at the website.
 
 If everything goes well, you will be ready to fetch your first real exercise.
+
+## Tips
+
+Purescript setup: `npm install -g purescript pulp bower`
+
+Install project dependencies: `bower install` (inside the "hello-world" directory)
+
+Building: `pulp build` (gotta do this once before the PureScript editor plugins will work)
+
+Running the test: `pulp test`
+
+Submitting: `exercism submit src/HelloWorld.purs`
+
 ## Source
 
 This is an exercise to introduce users to using Exercism [http://en.wikipedia.org/wiki/%22Hello,_world!%22_program](http://en.wikipedia.org/wiki/%22Hello,_world!%22_program)
