@@ -14,7 +14,7 @@ main = runTest do
         Bob.hey "Tom-ay-totom-aaaah-to."
 
     test "shouting" do
-      Assert.equal "Whoachill out!" $
+      Assert.equal "Whoa, chill out!" $
         Bob.hey "WATCH OUT!"
 
     test "asking a question" do
@@ -34,11 +34,11 @@ main = runTest do
         Bob.hey "It's OK if you don't want to go to the DMV."
 
     test "forceful questions" do
-      Assert.equal "Whoachill out!" $
+      Assert.equal "Whoa, chill out!" $
         Bob.hey "WHAT THE HELL WERE YOU THINKING?"
 
     test "shouting numbers" do
-      Assert.equal "Whoachill out!" $
+      Assert.equal "Whoa, chill out!" $
         Bob.hey "12, 3 GO!"
 
     test "only numbers" do
@@ -50,11 +50,11 @@ main = runTest do
         Bob.hey "4?"
 
     test "shouting with special characters" do
-      Assert.equal "Whoachill out!" $
+      Assert.equal "Whoa, chill out!" $
         Bob.hey "ZOMG THE %^*@#$(*^ ZOMBIES ARE COMING!!11!!1!"
 
     test "shouting with no exclamation mark" do
-      Assert.equal "Whoachill out!" $
+      Assert.equal "Whoa, chill out!" $
         Bob.hey "I HATE YOU"
 
     test "statement containing a question mark" do
