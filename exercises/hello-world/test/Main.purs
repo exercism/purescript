@@ -1,14 +1,27 @@
 module Test.Main where
 
 import Prelude
-import Test.Unit (suite, test)
+import Control.Monad.Eff (Eff)
+import Control.Monad.Eff.AVar (AVAR)
+import Control.Monad.Eff.Console (CONSOLE)
+import Test.Unit (TestSuite, suite, test)
+import Test.Unit.Console (TESTOUTPUT)
 import Test.Unit.Main (runTest)
 import Test.Unit.Assert as Assert
 import Data.Maybe (Maybe(Just, Nothing))
 import HelloWorld (helloWorld)
 
+main :: forall eff
+  . Eff ( avar :: AVAR
+        , console :: CONSOLE
+        , testOutput :: TESTOUTPUT
+        | eff                     
+        )
+        Unit
+main = runTest suites
 
-main = runTest do
+suites :: forall e. TestSuite e
+suites = do
   suite "HelloWorld.helloWorld" do
     test "Hello with no name" do
       Assert.equal "Hello, World!" (helloWorld Nothing)

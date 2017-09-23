@@ -3,15 +3,27 @@ module Test.Main where
 import Prelude
 import Test.Unit.Assert as Assert
 import Control.Monad.Eff (Eff)
+import Control.Monad.Eff.AVar (AVAR)
+import Control.Monad.Eff.Console (CONSOLE)
 import Data.Date (Weekday(..), canonicalDate)
 import Data.Enum (toEnum)
 import Data.Maybe (Maybe(..))
 import Meetup (Week(..), meetup)
-import Test.Unit (suite, test)
+import Test.Unit (TestSuite, suite, test)
+import Test.Unit.Console (TESTOUTPUT)
 import Test.Unit.Main (runTest)
 
-main :: Eff _ Unit
-main = runTest do
+main :: forall eff
+  . Eff ( avar :: AVAR
+        , console :: CONSOLE
+        , testOutput :: TESTOUTPUT
+        | eff                     
+        )
+        Unit
+main = runTest suites
+
+suites :: forall e. TestSuite e
+suites = do
   suite "Meetup.meetup" do
 
     test "monteenth of May 2013" $
