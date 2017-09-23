@@ -12,3 +12,5 @@ bin/configlet.exe
 **/output
 **/.psc*
 **/.psa*
+
+.work

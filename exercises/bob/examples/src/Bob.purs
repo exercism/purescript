@@ -12,7 +12,7 @@ import Partial.Unsafe as Partial
 hey :: String -> String
 hey msg =
   if hasLetters msg && allUppercase msg then
-    "Whoachill out!"
+    "Whoa, chill out!"
   else if isQuestion msg then
     "Sure."
   else if isSilence msg then

@@ -2,16 +2,27 @@ module Test.Main where
 
 import Prelude
 import Control.Monad.Eff (Eff)
+import Control.Monad.Eff.AVar (AVAR)
+import Control.Monad.Eff.Console (CONSOLE)
 import Data.Map (fromFoldable)
-import Data.Maybe (Maybe(..))
 import Data.Tuple (Tuple(..))
 import Test.Unit.Assert as Assert
-import Test.Unit (suite, test)
+import Test.Unit (TestSuite, suite, test)
+import Test.Unit.Console (TESTOUTPUT)
 import Test.Unit.Main (runTest)
 import Etl (transform)
 
-main :: Eff _ Unit
-main = runTest do
+main :: forall eff
+  . Eff ( avar :: AVAR
+        , console :: CONSOLE
+        , testOutput :: TESTOUTPUT
+        | eff                     
+        )
+        Unit
+main = runTest suites
+
+suites :: forall e. TestSuite e
+suites = do
   suite "Etl.transform" do
     
     test "a single letter" $
