@@ -29,6 +29,15 @@ As a first step we recommend you read the [contributing guide][cont-guide].
 
 [cont-guide]: https://github.com/exercism/docs/blob/master/contributing-to-language-tracks/README.md
 
+Due to Travis builds taking too long and timing out, the current build plan compiles and runs the tests for all exercises in a single run. This requires the following:
+
+- A master bower is given in `etc/bower.json`. Test scripts assure this one is used when they are run
+  * Please only update the master one and then run `bin/update-bower.sh` to sync them up. 
+  * After editing `etc/bower.json`, it is advisable to run `bin/check-bower.sh`. This checks for any discrepancies between various bower scripts.
+- Make sure exercises have a single module in `examples/src`
+
+See [this PR](https://github.com/exercism/purescript/pull/71) for more details and the background.
+
 #### Reporting or fixing bugs
 
 Typical examples for a bug: A typo, a missing test case, an unclear or

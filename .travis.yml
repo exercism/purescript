@@ -10,6 +10,7 @@ install:
 script:
   - bin/fetch-configlet
   - bin/configlet lint .
+  - bin/check-bower.sh
   - bin/test.sh
 
 cache:
