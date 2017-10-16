@@ -250,6 +250,16 @@
       "topics": [
         "arrays"
       ]
+    },
+    {
+      "uuid": "8ebcfe11-0a42-e980-d120-fb3fd581e426e9e237e",
+      "slug": "rna-transcription",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 1,
+      "topics": [
+        "strings"
+      ]
     }
   ],
   "foregone": [
