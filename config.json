@@ -250,6 +250,17 @@
       "topics": [
         "arrays"
       ]
+    },
+    {
+      "uuid": "d99298e6-0703-6080-8a2d-16e803173b64667909f",
+      "slug": "collatz-conjecture",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 1,
+      "topics": [
+        "arithmetics",
+        "maybe"
+      ]
     }
   ],
   "foregone": [

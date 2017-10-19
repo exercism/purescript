@@ -1,0 +1,3 @@
+module CollatzConjecture
+  ( collatz
+  ) where
