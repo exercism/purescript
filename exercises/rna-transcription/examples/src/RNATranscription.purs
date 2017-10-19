@@ -3,20 +3,16 @@ module RNATranscription
   ) where
 
 import Prelude
-import Data.Array (zip)
-import Data.Map (Map, fromFoldable, lookup)
-import Data.Maybe (Maybe)
+import Data.Maybe (Maybe(..))
 import Data.String (fromCharArray, toCharArray)
 import Data.Traversable (traverse)
 
 toRNA :: String -> Maybe String
-toRNA s = fromCharArray <$> traverse (_ `lookup` rnaMap) (toCharArray s)
+toRNA dna = fromCharArray <$> traverse complement (toCharArray dna)
 
-dna :: Array Char
-dna = toCharArray "CGAT"
-
-rna :: Array Char
-rna = toCharArray "GCUA"
-
-rnaMap :: Map Char Char
-rnaMap = fromFoldable $ zip dna rna
+complement :: Char -> Maybe Char
+complement 'C' = Just 'G'
+complement 'G' = Just 'C'
+complement 'A' = Just 'U'
+complement 'T' = Just 'A'
+complement _ = Nothing
