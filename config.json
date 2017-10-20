@@ -261,6 +261,18 @@
         "arithmetics",
         "maybe"
       ]
+    },
+    {
+      "uuid": "ee76a602-0eae-2680-b0d6-b804a419ed267ef04c2",
+      "slug": "sum-of-multiples",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 1,
+      "topics": [
+        "arithmetics",
+        "arrays",
+        "modulo"
+      ]
     }
   ],
   "foregone": [
