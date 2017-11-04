@@ -58,7 +58,14 @@ node etc/test-module-updater.js $work_dir/test
 cd $work_dir
 
 time bower install
-time pulp test
+
+# CI reports that we can use more cores than we can, so limit
+# the number we attempt to use to prevent slowdown on CI.
+if [[ -z "$LIMIT_CORES" ]]; then
+  time pulp test -j 2
+else
+  time pulp test
+fi
 
 test_result=$?
 

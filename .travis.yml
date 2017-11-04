@@ -11,7 +11,7 @@ script:
   - bin/fetch-configlet
   - bin/configlet --track-id purescript lint .
   - bin/check-bower.sh
-  - bin/test.sh
+  - LIMIT_CORES=1 bin/test.sh
 
 cache:
   directories:
