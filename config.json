@@ -252,7 +252,7 @@
       ]
     },
     {
-      "uuid": "d99298e6-0703-6080-8a2d-16e803173b64667909f",
+      "uuid": "b2d299f3-c382-4271-bd9e-f9d5615e5403",
       "slug": "collatz-conjecture",
       "core": false,
       "unlocked_by": null,
@@ -263,7 +263,7 @@
       ]
     },
     {
-      "uuid": "ee76a602-0eae-2680-b0d6-b804a419ed267ef04c2",
+      "uuid": "a686d00c-4dd4-4208-88c9-d17b00d97b28",
       "slug": "sum-of-multiples",
       "core": false,
       "unlocked_by": null,
@@ -275,7 +275,7 @@
       ]
     },
     {
-      "uuid": "8ebcfe11-0a42-e980-d120-fb3fd581e426e9e237e",
+      "uuid": "b7648fa5-1aff-477c-973c-079245060d73",
       "slug": "rna-transcription",
       "core": false,
       "unlocked_by": null,
