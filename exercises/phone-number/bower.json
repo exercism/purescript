@@ -1,0 +1,26 @@
+{
+  "name": "raindrops",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "output"
+  ],
+  "dependencies": {
+    "purescript-console": "^3.0.0",
+    "purescript-datetime": "^3.4.0",
+    "purescript-either": "^3.1.0",
+    "purescript-enums": "^3.2.1",
+    "purescript-integers": "^3.1.0",
+    "purescript-lists": "^4.10.0",
+    "purescript-maps": "^3.5.2",
+    "purescript-prelude": "^3.1.0",
+    "purescript-sets": "^3.0.0",
+    "purescript-strings": "^3.3.1",
+    "purescript-unicode": "^3.0.1"
+  },
+  "devDependencies": {
+    "purescript-psci-support": "^3.0.0",
+    "purescript-test-unit": "^13.0.0"
+  }
+}
