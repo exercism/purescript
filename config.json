@@ -284,6 +284,18 @@
         "maybe",
         "strings"
       ]
+    },
+    {
+      "uuid": "09a9ab8e-acaf-4f3d-96ff-789321a53785",
+      "slug": "phone-number",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 1,
+      "topics": [
+        "pattern_matching",
+        "conditionals",
+        "strings"
+      ]
     }
   ],
   "foregone": [
