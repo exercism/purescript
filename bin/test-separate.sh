@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 xpurescript=$(dirname "$BASH_SOURCE")
-xpurescript=$(readlink -f "$xpurescript/..")
+xpurescript=$(cd "$xpurescript/.." && pwd -P)
 cd "$xpurescript/exercises"
 
 # Calling the script with 'clean' as the first argument

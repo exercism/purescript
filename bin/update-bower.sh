@@ -7,7 +7,7 @@
 # please only update the master bower.json
 
 xpurescript=$(dirname "$BASH_SOURCE")
-xpurescript=$(readlink -f "$xpurescript/..")
+xpurescript=$(cd "$xpurescript/.." && pwd -P)
 cd "$xpurescript/exercises"
 
 bower_master="$xpurescript/etc/bower.json"

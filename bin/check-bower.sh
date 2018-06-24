@@ -5,7 +5,7 @@
 # and the master bower.json in etc/bower.json
 
 xpurescript=$(dirname "$BASH_SOURCE")
-xpurescript=$(readlink -f "$xpurescript/..")
+xpurescript=$(cd "$xpurescript/.." && pwd -P)
 cd "$xpurescript/exercises"
 
 bower_master="$xpurescript/etc/bower.json"

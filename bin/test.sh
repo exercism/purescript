@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 xpurescript=$(dirname "$BASH_SOURCE")
-xpurescript=$(readlink -f "$xpurescript/..")
+xpurescript=$(cd "$xpurescript/.." && pwd -P)
 cd "$xpurescript"
 
 # Prepare the work directory
