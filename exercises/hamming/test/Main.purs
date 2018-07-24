@@ -6,7 +6,6 @@ import Prelude
 
 import Effect (Effect)
 import Test.Unit (TestSuite, suite, test)
-import Test.Unit.Console (TESTOUTPUT)
 import Test.Unit.Main (runTest)
 import Test.Unit.Assert as Assert
 import Data.Maybe (Maybe(..))

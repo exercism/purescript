@@ -8,7 +8,6 @@ import Test.Unit.Main (runTest)
 import Test.Unit.Assert as Assert
 import Data.List (List(Nil), fromFoldable)
 import Data.String as String
-import Data.String.Common as String
 import Accumulate (accumulate)
 
 main :: Effect Unit

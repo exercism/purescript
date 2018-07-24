@@ -15,6 +15,10 @@ data Triangle
 
 derive instance eqTriangle :: Eq Triangle
 
+instance showTriangle :: Show Triangle where
+  show Equilateral = "Equilateral"
+  show Isosceles = "Isosceles"
+  show Scalene = "Scalene"
 
 type ErrorMsg = String
 
