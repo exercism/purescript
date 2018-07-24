@@ -3,8 +3,8 @@ module ScrabbleScore
   ) where
 
 import Prelude
-import Data.Char (toLower)
-import Data.String (toCharArray)
+import Data.String.CodeUnits (toCharArray)
+import Data.String.Common (toLower)
 import Data.Foldable (foldl)
 
 
@@ -12,9 +12,9 @@ scoreWord :: String -> Int
 scoreWord =
   let
     addLetterScore acc =
-      add acc <<< scoreChar <<< toLower
+      add acc <<< scoreChar
   in
-    foldl addLetterScore 0 <<< toCharArray
+    foldl addLetterScore 0 <<< toCharArray <<< toLower
 
 
 scoreChar :: Char -> Int

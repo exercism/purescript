@@ -5,8 +5,9 @@ module WordCount
 import Prelude
 import Data.Array (foldl)
 import Data.Maybe (Maybe(Just), maybe)
-import Data.StrMap (StrMap, alter, empty)
-import Data.String (Pattern(..), split, toLower, trim)
+import Data.Map (Map, alter, empty)
+import Data.String.Common (split, toLower, trim)
+import Data.String.Pattern (Pattern(..))
 import Data.String.Regex (replace)
 import Data.String.Regex.Flags (global)
 import Data.String.Regex.Unsafe (unsafeRegex)
@@ -22,10 +23,10 @@ prepare = whitePunc
         remQuot = replace (unsafeRegex "'(\\w+)'" global) "$1"
         aggWhite = replace (unsafeRegex " +" global) " "
 
-freq :: Array String -> StrMap Int
+freq :: Array String -> Map String Int
 freq = foldl mupd empty
   where mupd acc word = alter cupd word acc
         cupd = maybe 1 ((+) 1) >>> Just
 
-wordCount :: String -> StrMap Int
+wordCount :: String -> Map String Int
 wordCount = prepare >>> freq

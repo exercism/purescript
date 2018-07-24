@@ -24,23 +24,15 @@ const testMain = `
 module Test.Main where
 
 import Prelude
-import Control.Monad.Eff (Eff)
-import Control.Monad.Eff.AVar (AVAR)
-import Control.Monad.Eff.Console (CONSOLE)
-import Test.Unit.Console (TESTOUTPUT)
+
+import Effect (Effect)
 import Test.Unit.Main (runTest)
 
 `
 + imports +
 `
 
-main :: forall eff
-  . Eff ( avar :: AVAR
-        , console :: CONSOLE
-        , testOutput :: TESTOUTPUT
-        | eff                     
-        )
-        Unit
+main :: Effect Unit
 main = runTest do
 `
 + calls

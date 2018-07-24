@@ -6,7 +6,8 @@ import Prelude
 import Data.Array (filter, foldl)
 import Data.Map (alter, empty, values)
 import Data.Maybe (Maybe(..))
-import Data.String (toCharArray, toLower)
+import Data.String.CodeUnits (toCharArray)
+import Data.String.Common (toLower)
 import Data.Traversable (all)
 
 isIsogram :: String -> Boolean

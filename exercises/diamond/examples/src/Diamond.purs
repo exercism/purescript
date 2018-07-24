@@ -3,10 +3,12 @@ module Diamond
    ) where
 
 import Prelude
+
 import Data.Array (drop, replicate, reverse)
 import Data.Char (toCharCode)
 import Data.Enum (enumFromTo)
-import Data.String (fromCharArray, singleton)
+import Data.String (codePointFromChar, singleton)
+import Data.String.CodeUnits (fromCharArray)
 
 spaces :: Int -> String
 spaces width = fromCharArray $ replicate width ' '
@@ -14,9 +16,9 @@ spaces width = fromCharArray $ replicate width ' '
 mkRow :: Int -> Char -> String
 mkRow width 'A' = spaces width <> "A" <> spaces width
 mkRow width ch = spaces side
-                 <> singleton ch
+                 <> singleton (codePointFromChar ch)
                  <> spaces mid
-                 <> singleton ch
+                 <> singleton (codePointFromChar ch)
                  <> spaces side
   where depth = toCharCode ch - toCharCode 'A'
         side = width - depth

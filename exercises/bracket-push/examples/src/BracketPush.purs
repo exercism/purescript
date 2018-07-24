@@ -5,7 +5,7 @@ module BracketPush
 import Prelude
 import Data.Array (toUnfoldable)
 import Data.List (List(..), filter, (:))
-import Data.String (toCharArray)
+import Data.String.CodeUnits (toCharArray)
 
 data Bracket = Round | Square | Curly
 

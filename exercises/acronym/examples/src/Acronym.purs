@@ -3,16 +3,18 @@ module Acronym
   ) where
 
 import Prelude
-import Data.Foldable (foldl)
-import Data.String as String
-import Data.Char as Char
-import Data.List as List
-import Data.List (List)
+
 import Data.Char.Unicode as UChar
+import Data.Foldable (foldl)
+import Data.List (List)
+import Data.List as List
+import Data.String (codePointFromChar)
+import Data.String as String
+import Data.String.CodeUnits (toCharArray)
 
 abbreviate :: String -> String
 abbreviate =
-  initials <<< List.fromFoldable <<< String.toCharArray
+  initials <<< List.fromFoldable <<< toCharArray
 
 data CharType
   = Upper
@@ -33,9 +35,9 @@ classify c
 initials :: List Char -> String
 initials =
   let
-    next Lower Upper c = String.singleton c
-    next Space _ c     = String.singleton (Char.toUpper c)
-    next _ _ _ = ""
+    next Lower Upper = String.singleton <<< codePointFromChar
+    next Space _     = String.toUpper <<< String.singleton <<< codePointFromChar
+    next _     _     = const ""
 
     step { acc, last } c =
       let charClass = classify c

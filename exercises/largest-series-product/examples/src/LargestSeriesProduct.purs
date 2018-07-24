@@ -3,11 +3,13 @@ module LargestSeriesProduct
   ) where
 
 import Prelude
+
 import Data.Array (drop, length, take, (:))
 import Data.Foldable (maximum, product)
 import Data.Int (fromString)
 import Data.Maybe (Maybe(..))
-import Data.String (singleton, toCharArray)
+import Data.String (codePointFromChar, singleton)
+import Data.String.CodeUnits (toCharArray)
 import Data.Traversable (sequence)
 
 spans :: forall a. Int -> Array a -> Array (Array a)
@@ -17,7 +19,7 @@ spans n a
 
 toIntArray :: String -> Maybe (Array Int)
 toIntArray = toCharArray
-             >>> map (singleton >>> fromString) 
+             >>> map (codePointFromChar >>> singleton >>> fromString)
              >>> sequence
 
 largestProduct :: String -> Int -> Maybe Int

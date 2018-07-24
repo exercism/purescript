@@ -1,0 +1,6 @@
+{
+  "purescript.autoStartPscIde": false,
+  "purescript.outputDirectory": ".work/output",
+  "purescript.packagePath": ".work/bower_components",
+  "purescript.sourcePath": "exercises"
+}
