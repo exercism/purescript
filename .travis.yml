@@ -10,7 +10,8 @@ script:
   - bin/fetch-configlet
   - bin/configlet --track-id purescript lint .
   - bin/check-bower.sh
-  - LIMIT_CORES=1 bin/test.sh
+  - bin/test.sh
+  - bin/test-separate.sh
 
 cache:
   directories:
