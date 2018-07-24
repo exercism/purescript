@@ -3,25 +3,16 @@ module Test.Main where
 import Prelude
 
 import CollatzConjecture (collatz)
-import Control.Monad.Aff.AVar (AVAR)
-import Control.Monad.Eff (Eff)
-import Control.Monad.Eff.Console (CONSOLE)
+import Effect (Effect)
 import Data.Maybe (Maybe(..))
 import Test.Unit (TestSuite, suite, test)
 import Test.Unit.Assert as Assert
-import Test.Unit.Console (TESTOUTPUT)
 import Test.Unit.Main (runTest)
 
-main :: forall eff
-  . Eff ( avar :: AVAR
-        , console :: CONSOLE
-        , testOutput :: TESTOUTPUT
-        | eff
-        )
-        Unit
+main :: Effect Unit
 main = runTest suites
 
-suites :: forall e. TestSuite e
+suites :: TestSuite
 suites = do
   suite "CollatzConjecture.collatz" do
     test "zero steps for one" do

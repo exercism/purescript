@@ -62,7 +62,7 @@ time bower install
 # CI reports that we can use more cores than we can, so limit
 # the number we attempt to use to prevent slowdown on CI.
 if [[ -z "$LIMIT_CORES" ]]; then
-  time pulp test -j 2
+  time pulp run -j 2 -m Test.Main
 else
   time pulp test
 fi

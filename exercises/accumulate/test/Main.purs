@@ -1,27 +1,20 @@
 module Test.Main where
 
 import Prelude
-import Control.Monad.Eff (Eff)
-import Control.Monad.Eff.AVar (AVAR)
-import Control.Monad.Eff.Console (CONSOLE)
+
+import Effect (Effect)
 import Test.Unit (TestSuite, suite, test)
-import Test.Unit.Console (TESTOUTPUT)
 import Test.Unit.Main (runTest)
 import Test.Unit.Assert as Assert
 import Data.List (List(Nil), fromFoldable)
 import Data.String as String
+import Data.String.Common as String
 import Accumulate (accumulate)
 
-main :: forall eff
-  . Eff ( avar :: AVAR
-        , console :: CONSOLE
-        , testOutput :: TESTOUTPUT
-        | eff                     
-        )
-        Unit
+main :: Effect Unit
 main = runTest suites
 
-suites :: forall e. TestSuite e
+suites :: TestSuite
 suites = do
   suite "Accumulate.accumulate" do
     test "empty accumulation" $

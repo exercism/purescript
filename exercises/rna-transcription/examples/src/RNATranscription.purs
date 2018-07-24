@@ -4,7 +4,7 @@ module RNATranscription
 
 import Prelude
 import Data.Maybe (Maybe(..))
-import Data.String (fromCharArray, toCharArray)
+import Data.String.CodeUnits (fromCharArray, toCharArray)
 import Data.Traversable (traverse)
 
 toRNA :: String -> Maybe String

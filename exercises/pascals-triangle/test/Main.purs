@@ -1,43 +1,35 @@
 module Test.Main where
 
 import Prelude
+
 import Test.Unit.Assert as Assert
-import Control.Monad.Eff (Eff)
-import Control.Monad.Aff.AVar (AVAR)
-import Control.Monad.Eff.Console (CONSOLE)
+import Effect (Effect)
 import Data.Maybe (Maybe(..))
 import PascalsTriangle (rows)
 import Test.Unit (TestSuite, suite, test)
-import Test.Unit.Console (TESTOUTPUT)
 import Test.Unit.Main (runTest)
 
-main :: forall eff
-  . Eff ( avar :: AVAR
-        , console :: CONSOLE
-        , testOutput :: TESTOUTPUT
-        | eff                     
-        )
-        Unit
+main :: Effect Unit
 main = runTest suites
 
-suites :: forall e. TestSuite e
+suites :: TestSuite
 suites = do
   suite "Given a count, return a collection of that many rows of pascal's triangle" do
-      
+
       test "zero rows" $
         Assert.equal
           (Just
             []
           )
           (rows (Just 0))
-      
+
       test "single row" $
         Assert.equal
           (Just
             [[1]]
           )
           (rows (Just 1))
-      
+
       test "two rows" $
         Assert.equal
           (Just
@@ -46,7 +38,7 @@ suites = do
             ]
           )
           (rows (Just 2))
-      
+
       test "three rows" $
         Assert.equal
           (Just
@@ -56,7 +48,7 @@ suites = do
             ]
           )
           (rows (Just 3))
-      
+
       test "four rows" $
         Assert.equal
           (Just
@@ -67,12 +59,12 @@ suites = do
             ]
           )
           (rows (Just 4))
-      
+
       test "negative rows" $
         Assert.equal
           Nothing
           (rows (Just (-1)))
-      
+
       test "null/no rows" $
         Assert.equal
           Nothing

@@ -3,7 +3,7 @@ module Bob
   ) where
 
 import Prelude
-import Data.String as String
+import Data.String.Common as String
 import Data.Either as Either
 import Data.String.Regex as Regex
 import Data.String.Regex.Flags (noFlags)

@@ -4,7 +4,8 @@ module Pangram
 
 import Prelude
 import Data.Set as Set
-import Data.String as String
+import Data.String.Common as String
+import Data.String.CodeUnits (toCharArray)
 
 isPangram :: String -> Boolean
 isPangram str =
@@ -22,4 +23,4 @@ alphabet =
 
 charSet :: String -> Set.Set Char
 charSet =
-  String.toCharArray >>> Set.fromFoldable
+  toCharArray >>> Set.fromFoldable

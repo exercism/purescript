@@ -1,25 +1,17 @@
 module Test.Main where
 
 import Prelude
-import Control.Monad.Eff (Eff)
-import Control.Monad.Eff.AVar (AVAR)
-import Control.Monad.Eff.Console (CONSOLE)
+
+import Effect (Effect)
 import Test.Unit.Assert as Assert
 import Test.Unit (TestSuite, suite, test)
-import Test.Unit.Console (TESTOUTPUT)
 import Test.Unit.Main (runTest)
 import DifferenceOfSquares (differenceOfSquares, squareOfSum, sumOfSquares)
 
-main :: forall eff
-  . Eff ( avar :: AVAR
-        , console :: CONSOLE
-        , testOutput :: TESTOUTPUT
-        | eff                     
-        )
-        Unit
+main :: Effect Unit
 main = runTest suites
 
-suites :: forall e. TestSuite e
+suites :: TestSuite
 suites = do
   suite "Square the sum of the numbers up to the given number" do
 

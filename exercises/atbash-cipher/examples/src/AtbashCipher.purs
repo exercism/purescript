@@ -8,7 +8,9 @@ import Data.Array (drop, filter, take, zip, (:))
 import Data.Char.Unicode (isPunctuation, isSpace)
 import Data.Map (Map, fromFoldable, lookup)
 import Data.Maybe (Maybe)
-import Data.String (fromCharArray, joinWith, toCharArray, toLower)
+import Data.String (joinWith)
+import Data.String.Common (toLower)
+import Data.String.CodeUnits (fromCharArray, toCharArray)
 import Data.Traversable (traverse)
 
 plain :: Array Char

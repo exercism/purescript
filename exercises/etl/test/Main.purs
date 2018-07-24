@@ -1,30 +1,22 @@
 module Test.Main where
 
 import Prelude
-import Control.Monad.Eff (Eff)
-import Control.Monad.Eff.AVar (AVAR)
-import Control.Monad.Eff.Console (CONSOLE)
+
+import Effect (Effect)
 import Data.Map (fromFoldable)
 import Data.Tuple (Tuple(..))
 import Test.Unit.Assert as Assert
 import Test.Unit (TestSuite, suite, test)
-import Test.Unit.Console (TESTOUTPUT)
 import Test.Unit.Main (runTest)
 import Etl (transform)
 
-main :: forall eff
-  . Eff ( avar :: AVAR
-        , console :: CONSOLE
-        , testOutput :: TESTOUTPUT
-        | eff                     
-        )
-        Unit
+main :: Effect Unit
 main = runTest suites
 
-suites :: forall e. TestSuite e
+suites :: TestSuite
 suites = do
   suite "Etl.transform" do
-    
+
     test "a single letter" $
       Assert.equal (fromFoldable
                      [Tuple 'a' 1]
@@ -34,7 +26,7 @@ suites = do
                        [Tuple 1 ['A']]
                      )
                    )
-     
+
     test "single score with multiple letters" $
       Assert.equal (fromFoldable
                      [ Tuple 'a' 1
@@ -49,7 +41,7 @@ suites = do
                        [Tuple 1 ['A','E','I','O','U']]
                      )
                    )
-    
+
     test "multiple scores with multiple letters" $
       Assert.equal (fromFoldable
                      [ Tuple 'a' 1
@@ -65,7 +57,7 @@ suites = do
                        ]
                      )
                    )
-    
+
     test "multiple scores with differing numbers of letters" $
       Assert.equal (fromFoldable
                      [ Tuple 'a' 1

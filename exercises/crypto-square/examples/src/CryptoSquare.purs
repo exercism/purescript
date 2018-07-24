@@ -13,7 +13,9 @@ import Data.Foldable (maximum)
 import Data.Int (ceil, toNumber)
 import Data.List (transpose)
 import Data.Maybe (fromMaybe)
-import Data.String (drop, fromCharArray, joinWith, length, take, toCharArray, toLower)
+import Data.String (drop, joinWith, length, take)
+import Data.String.Common (toLower)
+import Data.String.CodeUnits (fromCharArray, toCharArray)
 import Math (sqrt)
 
 normalizedPlaintext :: String -> String

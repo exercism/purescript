@@ -1,27 +1,19 @@
 module Test.Main where
 
 import Prelude
+
 import Test.Unit.Assert as Assert
-import Control.Monad.Eff (Eff)
-import Control.Monad.Aff.AVar (AVAR)
-import Control.Monad.Eff.Console (CONSOLE)
-import Data.StrMap (fromFoldable)
+import Effect (Effect)
+import Data.Map (fromFoldable)
 import Data.Tuple (Tuple(..))
 import Test.Unit (TestSuite, suite, test)
-import Test.Unit.Console (TESTOUTPUT)
 import Test.Unit.Main (runTest)
 import WordCount (wordCount)
 
-main :: forall eff
-  . Eff ( avar :: AVAR
-        , console :: CONSOLE
-        , testOutput :: TESTOUTPUT
-        | eff                     
-        )
-        Unit
+main :: Effect Unit
 main = runTest suites
 
-suites :: forall e. TestSuite e
+suites :: TestSuite
 suites = do
   suite "WordCount.wordCount" do
 
@@ -44,21 +36,21 @@ suites = do
                                  , Tuple "blue" 1
                                  ])
                    (wordCount "one fish two fish red fish blue fish")
-    
+
     test "handles cramped lists" $
       Assert.equal (fromFoldable [ Tuple "one" 1
                                  , Tuple "two" 1
                                  , Tuple "three" 1
                                  ])
                    (wordCount "one,two,three")
-    
+
     test "handles expanded lists" $
       Assert.equal (fromFoldable [ Tuple "one" 1
                                  , Tuple "two" 1
                                  , Tuple "three" 1
                                  ])
                    (wordCount "one,\ntwo,\nthree")
-    
+
     test "ignore punctuation" $
       Assert.equal (fromFoldable [ Tuple "car" 1
                                  , Tuple "carpet" 1
@@ -67,20 +59,20 @@ suites = do
                                  , Tuple "javascript" 1
                                  ])
                    (wordCount "car: carpet as java: javascript!!&@$%^&")
-    
+
     test "include numbers" $
       Assert.equal (fromFoldable [ Tuple "testing" 2
                                  , Tuple "1" 1
                                  , Tuple "2" 1
                                  ])
                    (wordCount "testing, 1, 2 testing")
-    
+
     test "normalize case" $
       Assert.equal (fromFoldable [ Tuple "go" 3
                                  , Tuple "stop" 2
                                  ])
                    (wordCount "go Go GO Stop stop")
-    
+
     test "with apostrophes" $
       Assert.equal (fromFoldable [ Tuple "first" 1
                                  , Tuple "don't" 2
@@ -89,7 +81,7 @@ suites = do
                                  , Tuple "cry" 1
                                  ])
                    (wordCount "First: don't laugh. Then: don't cry.")
-    
+
     test "with quotations" $
       Assert.equal (fromFoldable [ Tuple "joe" 1
                                  , Tuple "can't" 1

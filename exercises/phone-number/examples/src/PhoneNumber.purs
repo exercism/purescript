@@ -6,7 +6,7 @@ module PhoneNumber
 import Prelude ((==), (<), (>>=), (&&), ($), otherwise)
 import Data.Char.Unicode (isDigit)
 import Data.Array (filter, head, tail, length, (!!))
-import Data.String (toCharArray, fromCharArray)
+import Data.String.CodeUnits (toCharArray, fromCharArray)
 import Data.Maybe (Maybe(..), fromMaybe)
 
 clean :: String -> Maybe (Array Char)

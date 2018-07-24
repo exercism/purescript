@@ -1,25 +1,17 @@
 module Test.Main where
 
 import Prelude
-import Test.Unit.Assert as Assert
+
 import Acronym (abbreviate)
-import Control.Monad.Eff (Eff)
-import Control.Monad.Eff.AVar (AVAR)
-import Control.Monad.Eff.Console (CONSOLE)
+import Effect (Effect)
 import Test.Unit (TestSuite, suite, test)
-import Test.Unit.Console (TESTOUTPUT)
+import Test.Unit.Assert as Assert
 import Test.Unit.Main (runTest)
 
-main :: forall eff
-  . Eff ( avar :: AVAR
-        , console :: CONSOLE
-        , testOutput :: TESTOUTPUT
-        | eff                     
-        )
-        Unit
+main :: Effect Unit
 main = runTest suites
 
-suites :: forall e. TestSuite e
+suites :: TestSuite
 suites = do
   suite "Acronym.abbreviate" do
     test "acronyms from title case" $
