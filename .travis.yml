@@ -1,11 +1,10 @@
-language: bash
-
-sudo: false
+dist: trusty
+sudo: required
+language: node_js
+node_js: 10
 
 install:
-  - nvm install 6
-  - nvm use 6
-  - npm install -g purescript@0.11.6 pulp@12.0.1 bower
+  - npm install -g purescript@0.12.0 pulp bower
 
 script:
   - bin/fetch-configlet
@@ -15,4 +14,4 @@ script:
 
 cache:
   directories:
-  - $HOME/.cache/bower/
+    - $HOME/.cache/bower/
