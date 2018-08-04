@@ -168,7 +168,8 @@
       "unlocked_by": null,
       "difficulty": 1,
       "topics": [
-        "base_conversion"
+        "base_conversion",
+        "math"
       ]
     },
     {
@@ -188,7 +189,8 @@
       "unlocked_by": null,
       "difficulty": 1,
       "topics": [
-        "arithmetics"
+        "arithmetics",
+        "math"
       ]
     },
     {
@@ -240,6 +242,7 @@
       "unlocked_by": null,
       "difficulty": 1,
       "topics": [
+        "math",
         "strings"
       ]
     },
@@ -250,7 +253,8 @@
       "unlocked_by": null,
       "difficulty": 1,
       "topics": [
-        "arrays"
+        "arrays",
+        "math"
       ]
     },
     {
@@ -261,6 +265,7 @@
       "difficulty": 1,
       "topics": [
         "arithmetics",
+        "math",
         "maybe"
       ]
     },
@@ -273,6 +278,7 @@
       "topics": [
         "arithmetics",
         "arrays",
+        "math",
         "modulo"
       ]
     },
