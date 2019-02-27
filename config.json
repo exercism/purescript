@@ -1,7 +1,7 @@
 {
   "language": "PureScript",
   "active": true,
-  "blurb": "",
+  "blurb": "A strongly-typed functional programming language that compiles to JavaScript",
   "exercises": [
     {
       "slug": "hello-world",
