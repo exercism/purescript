@@ -40,6 +40,16 @@
       "link_url": "https://matthias-wimmer.de/",
       "avatar_url": null,
       "bio": "Professionally I code in Rust and C, but in private life I love Haskell and related languages."
+    },
+    {
+      "github_username": "spicydonuts",
+      "alumnus": false,
+      "show_on_website": true,
+      "name": "Madeline Trotter",
+      "link_text": null,
+      "link_url": "https://github.com/spicydonuts",
+      "avatar_url": null,
+      "bio": "PureScript dev by day, mostly frontends using React."
     }
   ]
 }
