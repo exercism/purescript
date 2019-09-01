@@ -5,4 +5,5 @@ import Data.Maybe (Maybe(..))
 
 helloWorld :: Maybe String -> String
 helloWorld Nothing = "Hello, World!"
-helloWorld (Just x) = "Hello, " <> x <> "!"
+helloWorld (Just x) =
+  "Hello, " <> x <> "!"
