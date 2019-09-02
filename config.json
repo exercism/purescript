@@ -6,32 +6,93 @@
     {
       "slug": "hello-world",
       "uuid": "c41a2961-f7ca-4eaf-83cf-48762fc39c06",
-      "core": false,
+      "core": true,
       "auto_approve": true,
       "unlocked_by": null,
       "difficulty": 1,
       "topics": [
-        "maybe"
+        "maybe",
+        "strings"
       ]
     },
     {
       "slug": "leap",
       "uuid": "1a95beb7-5bb2-44c4-aee7-5790bcb38865",
-      "core": false,
+      "core": true,
       "unlocked_by": null,
       "difficulty": 1,
       "topics": [
+        "booleans",
         "modulo"
+      ]
+    },
+    {
+      "slug": "pangram",
+      "uuid": "aaf7a72c-ada0-4e43-8cc1-78d9e60ee151",
+      "core": true,
+      "unlocked_by": null,
+      "difficulty": 1,
+      "topics": [
+        "chars",
+        "strings"
       ]
     },
     {
       "slug": "bob",
       "uuid": "021a1f60-6086-4d8f-a8be-0f64cfd9620d",
-      "core": false,
+      "core": true,
       "unlocked_by": null,
       "difficulty": 1,
       "topics": [
         "strings"
+      ]
+    },
+    {
+      "slug": "accumulate",
+      "uuid": "d530077b-1eed-44cd-9791-5f78001c7372",
+      "core": true,
+      "unlocked_by": null,
+      "difficulty": 1,
+      "topics": [
+        "pattern_matching",
+        "recursion",
+        "type_variables"
+      ]
+    },
+    {
+      "slug": "collatz-conjecture",
+      "uuid": "b2d299f3-c382-4271-bd9e-f9d5615e5403",
+      "core": true,
+      "unlocked_by": null,
+      "difficulty": 1,
+      "topics": [
+        "arithmetics",
+        "math",
+        "maybe"
+      ]
+    },
+    {
+      "slug": "rna-transcription",
+      "uuid": "b7648fa5-1aff-477c-973c-079245060d73",
+      "core": true,
+      "unlocked_by": null,
+      "difficulty": 1,
+      "topics": [
+        "maybe",
+        "strings"
+      ]
+    },
+    {
+      "slug": "sum-of-multiples",
+      "uuid": "a686d00c-4dd4-4208-88c9-d17b00d97b28",
+      "core": true,
+      "unlocked_by": null,
+      "difficulty": 1,
+      "topics": [
+        "arithmetics",
+        "arrays",
+        "math",
+        "modulo"
       ]
     },
     {
@@ -55,17 +116,6 @@
       ]
     },
     {
-      "slug": "pangram",
-      "uuid": "aaf7a72c-ada0-4e43-8cc1-78d9e60ee151",
-      "core": false,
-      "unlocked_by": null,
-      "difficulty": 1,
-      "topics": [
-        "chars",
-        "strings"
-      ]
-    },
-    {
       "slug": "scrabble-score",
       "uuid": "c956e70b-4e34-451b-9374-19b9f2aefa37",
       "core": false,
@@ -74,18 +124,6 @@
       "topics": [
         "chars",
         "strings"
-      ]
-    },
-    {
-      "slug": "accumulate",
-      "uuid": "d530077b-1eed-44cd-9791-5f78001c7372",
-      "core": false,
-      "unlocked_by": null,
-      "difficulty": 1,
-      "topics": [
-        "pattern_matching",
-        "recursion",
-        "type_variables"
       ]
     },
     {
@@ -115,8 +153,10 @@
       "uuid": "d9bda7fe-51c1-42f0-9631-fcb7ddd163b8",
       "core": false,
       "unlocked_by": null,
-      "difficulty": 1,
+      "difficulty": 5,
       "topics": [
+        "maps",
+        "regex",
         "strings"
       ]
     },
@@ -125,7 +165,7 @@
       "uuid": "d0942b01-fe68-46b3-be66-8e19592f666b",
       "core": false,
       "unlocked_by": null,
-      "difficulty": 1,
+      "difficulty": 7,
       "topics": [
         "dates"
       ]
@@ -145,7 +185,7 @@
       "uuid": "dd60d894-9bab-4d53-96a2-11e77aa3e7f8",
       "core": false,
       "unlocked_by": null,
-      "difficulty": 1,
+      "difficulty": 5,
       "topics": [
         "dates"
       ]
@@ -155,7 +195,7 @@
       "uuid": "9270773b-20f0-4e82-b0fd-e651af9d8415",
       "core": false,
       "unlocked_by": null,
-      "difficulty": 1,
+      "difficulty": 3,
       "topics": [
         "bitwise_operations",
         "maps"
@@ -166,7 +206,7 @@
       "uuid": "79011a26-c8b8-4fea-bdce-f8e3d37bee23",
       "core": false,
       "unlocked_by": null,
-      "difficulty": 1,
+      "difficulty": 4,
       "topics": [
         "base_conversion",
         "math"
@@ -177,8 +217,9 @@
       "uuid": "0029ced5-503b-4491-a309-7f0176598dd0",
       "core": false,
       "unlocked_by": null,
-      "difficulty": 1,
+      "difficulty": 5,
       "topics": [
+        "algorithms",
         "binary_search"
       ]
     },
@@ -198,7 +239,7 @@
       "uuid": "bbaa71d1-be6a-444f-8661-006a40ef8a09",
       "core": false,
       "unlocked_by": null,
-      "difficulty": 1,
+      "difficulty": 2,
       "topics": [
         "strings"
       ]
@@ -208,7 +249,7 @@
       "uuid": "e4f49f2e-87bd-4506-9184-d90bec0adde5",
       "core": false,
       "unlocked_by": null,
-      "difficulty": 1,
+      "difficulty": 5,
       "topics": [
         "matrices",
         "strings"
@@ -230,7 +271,7 @@
       "uuid": "750d7b11-8201-4a83-b743-f2751d1743f6",
       "core": false,
       "unlocked_by": null,
-      "difficulty": 1,
+      "difficulty": 2,
       "topics": [
         "maps"
       ]
@@ -240,7 +281,7 @@
       "uuid": "78527833-8200-4085-8427-650aafb1990c",
       "core": false,
       "unlocked_by": null,
-      "difficulty": 1,
+      "difficulty": 4,
       "topics": [
         "math",
         "strings"
@@ -251,46 +292,10 @@
       "uuid": "83b533f1-a712-4d6a-bc97-505c6e7c9161",
       "core": false,
       "unlocked_by": null,
-      "difficulty": 1,
+      "difficulty": 3,
       "topics": [
         "arrays",
         "math"
-      ]
-    },
-    {
-      "slug": "collatz-conjecture",
-      "uuid": "b2d299f3-c382-4271-bd9e-f9d5615e5403",
-      "core": false,
-      "unlocked_by": null,
-      "difficulty": 1,
-      "topics": [
-        "arithmetics",
-        "math",
-        "maybe"
-      ]
-    },
-    {
-      "slug": "sum-of-multiples",
-      "uuid": "a686d00c-4dd4-4208-88c9-d17b00d97b28",
-      "core": false,
-      "unlocked_by": null,
-      "difficulty": 1,
-      "topics": [
-        "arithmetics",
-        "arrays",
-        "math",
-        "modulo"
-      ]
-    },
-    {
-      "slug": "rna-transcription",
-      "uuid": "b7648fa5-1aff-477c-973c-079245060d73",
-      "core": false,
-      "unlocked_by": null,
-      "difficulty": 1,
-      "topics": [
-        "maybe",
-        "strings"
       ]
     },
     {
