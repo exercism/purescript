@@ -292,7 +292,7 @@
       "uuid": "83b533f1-a712-4d6a-bc97-505c6e7c9161",
       "core": false,
       "unlocked_by": null,
-      "difficulty": 3,
+      "difficulty": 4,
       "topics": [
         "arrays",
         "math"
