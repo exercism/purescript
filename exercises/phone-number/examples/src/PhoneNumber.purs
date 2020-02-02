@@ -25,6 +25,5 @@ check input
   | otherwise = Just $ fromCharArray input
 
 
-phoneNumber :: String -> String
-phoneNumber input = fromMaybe "None" (clean input >>= check)
-
+phoneNumber :: String -> Maybe String
+phoneNumber input = clean input >>= check
