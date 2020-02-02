@@ -16,8 +16,7 @@
     "purescript-prelude": "^4.1.0",
     "purescript-strings": "^4.0.0",
     "purescript-unicode": "^4.0.1",
-    "purescript-ordered-collections": "^1.0.0",
-    "purescript-maybe": "^4.0.1"
+    "purescript-ordered-collections": "^1.0.0"
   },
   "devDependencies": {
     "purescript-psci-support": "^4.0.0",
