@@ -14,312 +14,314 @@
     "indent_style": "space",
     "indent_size": 2
   },
-  "exercises": [
-    {
-      "slug": "hello-world",
-      "name": "Hello World",
-      "uuid": "c41a2961-f7ca-4eaf-83cf-48762fc39c06",
-      "prerequisites": [],
-      "difficulty": 1,
-      "topics": [
-        "maybe",
-        "strings"
-      ]
-    },
-    {
-      "slug": "leap",
-      "name": "Leap",
-      "uuid": "1a95beb7-5bb2-44c4-aee7-5790bcb38865",
-      "prerequisites": [],
-      "difficulty": 1,
-      "topics": [
-        "booleans",
-        "modulo"
-      ]
-    },
-    {
-      "slug": "pangram",
-      "name": "Pangram",
-      "uuid": "aaf7a72c-ada0-4e43-8cc1-78d9e60ee151",
-      "prerequisites": [],
-      "difficulty": 1,
-      "topics": [
-        "chars",
-        "strings"
-      ]
-    },
-    {
-      "slug": "bob",
-      "name": "Bob",
-      "uuid": "021a1f60-6086-4d8f-a8be-0f64cfd9620d",
-      "prerequisites": [],
-      "difficulty": 1,
-      "topics": [
-        "strings"
-      ]
-    },
-    {
-      "slug": "accumulate",
-      "name": "Accumulate",
-      "uuid": "d530077b-1eed-44cd-9791-5f78001c7372",
-      "prerequisites": [],
-      "difficulty": 1,
-      "topics": [
-        "pattern_matching",
-        "recursion",
-        "type_variables"
-      ]
-    },
-    {
-      "slug": "collatz-conjecture",
-      "name": "Collatz Conjecture",
-      "uuid": "b2d299f3-c382-4271-bd9e-f9d5615e5403",
-      "prerequisites": [],
-      "difficulty": 1,
-      "topics": [
-        "arithmetics",
-        "math",
-        "maybe"
-      ]
-    },
-    {
-      "slug": "rna-transcription",
-      "name": "Rna Transcription",
-      "uuid": "b7648fa5-1aff-477c-973c-079245060d73",
-      "prerequisites": [],
-      "difficulty": 1,
-      "topics": [
-        "maybe",
-        "strings"
-      ]
-    },
-    {
-      "slug": "sum-of-multiples",
-      "name": "Sum Of Multiples",
-      "uuid": "a686d00c-4dd4-4208-88c9-d17b00d97b28",
-      "prerequisites": [],
-      "difficulty": 1,
-      "topics": [
-        "arithmetics",
-        "arrays",
-        "math",
-        "modulo"
-      ]
-    },
-    {
-      "slug": "atbash-cipher",
-      "name": "Atbash Cipher",
-      "uuid": "d077a175-2219-439c-9bfa-3098239e4cd6",
-      "prerequisites": [],
-      "difficulty": 1,
-      "topics": [
-        "strings"
-      ]
-    },
-    {
-      "slug": "difference-of-squares",
-      "name": "Difference Of Squares",
-      "uuid": "864d3c8b-fffe-4228-87f3-a56173b14eb4",
-      "prerequisites": [],
-      "difficulty": 1,
-      "topics": [
-        "arithmetics",
-        "math"
-      ]
-    },
-    {
-      "slug": "hamming",
-      "name": "Hamming",
-      "uuid": "3cd10a88-9cc0-4dcd-a2f3-1f5bcb5eaf07",
-      "prerequisites": [],
-      "difficulty": 1,
-      "topics": [
-        "iterating_over_two_lists_at_once"
-      ]
-    },
-    {
-      "slug": "isogram",
-      "name": "Isogram",
-      "uuid": "9cb54162-d19c-4155-aca9-e2b26f4d4da5",
-      "prerequisites": [],
-      "difficulty": 1,
-      "topics": [
-        "maps",
-        "strings"
-      ]
-    },
-    {
-      "slug": "phone-number",
-      "name": "Phone Number",
-      "uuid": "09a9ab8e-acaf-4f3d-96ff-789321a53785",
-      "prerequisites": [],
-      "difficulty": 1,
-      "topics": [
-        "conditionals",
-        "pattern_matching",
-        "strings"
-      ]
-    },
-    {
-      "slug": "raindrops",
-      "name": "Raindrops",
-      "uuid": "f0ce38ee-402f-451d-abd0-e3dc56d5cde4",
-      "prerequisites": [],
-      "difficulty": 1,
-      "topics": [
-        "modulo"
-      ]
-    },
-    {
-      "slug": "scrabble-score",
-      "name": "Scrabble Score",
-      "uuid": "c956e70b-4e34-451b-9374-19b9f2aefa37",
-      "prerequisites": [],
-      "difficulty": 1,
-      "topics": [
-        "chars",
-        "strings"
-      ]
-    },
-    {
-      "slug": "acronym",
-      "name": "Acronym",
-      "uuid": "79a091fa-7987-44e1-9146-fffa28352ee2",
-      "prerequisites": [],
-      "difficulty": 2,
-      "topics": [
-        "chars",
-        "strings"
-      ]
-    },
-    {
-      "slug": "diamond",
-      "name": "Diamond",
-      "uuid": "bbaa71d1-be6a-444f-8661-006a40ef8a09",
-      "prerequisites": [],
-      "difficulty": 2,
-      "topics": [
-        "strings"
-      ]
-    },
-    {
-      "slug": "etl",
-      "name": "Etl",
-      "uuid": "750d7b11-8201-4a83-b743-f2751d1743f6",
-      "prerequisites": [],
-      "difficulty": 2,
-      "topics": [
-        "maps"
-      ]
-    },
-    {
-      "slug": "triangle",
-      "name": "Triangle",
-      "uuid": "d8d3d3dd-01f8-4289-afe2-60595a580240",
-      "prerequisites": [],
-      "difficulty": 2,
-      "topics": [
-        "algebraic_data_types",
-        "type_classes"
-      ]
-    },
-    {
-      "slug": "allergies",
-      "name": "Allergies",
-      "uuid": "9270773b-20f0-4e82-b0fd-e651af9d8415",
-      "prerequisites": [],
-      "difficulty": 3,
-      "topics": [
-        "bitwise_operations",
-        "maps"
-      ]
-    },
-    {
-      "slug": "all-your-base",
-      "name": "All Your Base",
-      "uuid": "79011a26-c8b8-4fea-bdce-f8e3d37bee23",
-      "prerequisites": [],
-      "difficulty": 4,
-      "topics": [
-        "base_conversion",
-        "math"
-      ]
-    },
-    {
-      "slug": "largest-series-product",
-      "name": "Largest Series Product",
-      "uuid": "78527833-8200-4085-8427-650aafb1990c",
-      "prerequisites": [],
-      "difficulty": 4,
-      "topics": [
-        "math",
-        "strings"
-      ]
-    },
-    {
-      "slug": "pascals-triangle",
-      "name": "Pascals Triangle",
-      "uuid": "83b533f1-a712-4d6a-bc97-505c6e7c9161",
-      "prerequisites": [],
-      "difficulty": 4,
-      "topics": [
-        "arrays",
-        "math"
-      ]
-    },
-    {
-      "slug": "binary-search",
-      "name": "Binary Search",
-      "uuid": "0029ced5-503b-4491-a309-7f0176598dd0",
-      "prerequisites": [],
-      "difficulty": 5,
-      "topics": [
-        "algorithms",
-        "binary_search"
-      ]
-    },
-    {
-      "slug": "bracket-push",
-      "name": "Bracket Push",
-      "uuid": "dd60d894-9bab-4d53-96a2-11e77aa3e7f8",
-      "prerequisites": [],
-      "difficulty": 5,
-      "topics": [
-        "dates"
-      ]
-    },
-    {
-      "slug": "crypto-square",
-      "name": "Crypto Square",
-      "uuid": "e4f49f2e-87bd-4506-9184-d90bec0adde5",
-      "prerequisites": [],
-      "difficulty": 5,
-      "topics": [
-        "matrices",
-        "strings"
-      ]
-    },
-    {
-      "slug": "word-count",
-      "name": "Word Count",
-      "uuid": "d9bda7fe-51c1-42f0-9631-fcb7ddd163b8",
-      "prerequisites": [],
-      "difficulty": 5,
-      "topics": [
-        "maps",
-        "regex",
-        "strings"
-      ]
-    },
-    {
-      "slug": "meetup",
-      "name": "Meetup",
-      "uuid": "d0942b01-fe68-46b3-be66-8e19592f666b",
-      "prerequisites": [],
-      "difficulty": 7,
-      "topics": [
-        "dates"
-      ]
-    }
-  ]
+  "exercises": {
+    "practice": [
+      {
+        "slug": "hello-world",
+        "name": "Hello World",
+        "uuid": "c41a2961-f7ca-4eaf-83cf-48762fc39c06",
+        "prerequisites": [],
+        "difficulty": 1,
+        "topics": [
+          "maybe",
+          "strings"
+        ]
+      },
+      {
+        "slug": "leap",
+        "name": "Leap",
+        "uuid": "1a95beb7-5bb2-44c4-aee7-5790bcb38865",
+        "prerequisites": [],
+        "difficulty": 1,
+        "topics": [
+          "booleans",
+          "modulo"
+        ]
+      },
+      {
+        "slug": "pangram",
+        "name": "Pangram",
+        "uuid": "aaf7a72c-ada0-4e43-8cc1-78d9e60ee151",
+        "prerequisites": [],
+        "difficulty": 1,
+        "topics": [
+          "chars",
+          "strings"
+        ]
+      },
+      {
+        "slug": "bob",
+        "name": "Bob",
+        "uuid": "021a1f60-6086-4d8f-a8be-0f64cfd9620d",
+        "prerequisites": [],
+        "difficulty": 1,
+        "topics": [
+          "strings"
+        ]
+      },
+      {
+        "slug": "accumulate",
+        "name": "Accumulate",
+        "uuid": "d530077b-1eed-44cd-9791-5f78001c7372",
+        "prerequisites": [],
+        "difficulty": 1,
+        "topics": [
+          "pattern_matching",
+          "recursion",
+          "type_variables"
+        ]
+      },
+      {
+        "slug": "collatz-conjecture",
+        "name": "Collatz Conjecture",
+        "uuid": "b2d299f3-c382-4271-bd9e-f9d5615e5403",
+        "prerequisites": [],
+        "difficulty": 1,
+        "topics": [
+          "arithmetics",
+          "math",
+          "maybe"
+        ]
+      },
+      {
+        "slug": "rna-transcription",
+        "name": "Rna Transcription",
+        "uuid": "b7648fa5-1aff-477c-973c-079245060d73",
+        "prerequisites": [],
+        "difficulty": 1,
+        "topics": [
+          "maybe",
+          "strings"
+        ]
+      },
+      {
+        "slug": "sum-of-multiples",
+        "name": "Sum Of Multiples",
+        "uuid": "a686d00c-4dd4-4208-88c9-d17b00d97b28",
+        "prerequisites": [],
+        "difficulty": 1,
+        "topics": [
+          "arithmetics",
+          "arrays",
+          "math",
+          "modulo"
+        ]
+      },
+      {
+        "slug": "atbash-cipher",
+        "name": "Atbash Cipher",
+        "uuid": "d077a175-2219-439c-9bfa-3098239e4cd6",
+        "prerequisites": [],
+        "difficulty": 1,
+        "topics": [
+          "strings"
+        ]
+      },
+      {
+        "slug": "difference-of-squares",
+        "name": "Difference Of Squares",
+        "uuid": "864d3c8b-fffe-4228-87f3-a56173b14eb4",
+        "prerequisites": [],
+        "difficulty": 1,
+        "topics": [
+          "arithmetics",
+          "math"
+        ]
+      },
+      {
+        "slug": "hamming",
+        "name": "Hamming",
+        "uuid": "3cd10a88-9cc0-4dcd-a2f3-1f5bcb5eaf07",
+        "prerequisites": [],
+        "difficulty": 1,
+        "topics": [
+          "iterating_over_two_lists_at_once"
+        ]
+      },
+      {
+        "slug": "isogram",
+        "name": "Isogram",
+        "uuid": "9cb54162-d19c-4155-aca9-e2b26f4d4da5",
+        "prerequisites": [],
+        "difficulty": 1,
+        "topics": [
+          "maps",
+          "strings"
+        ]
+      },
+      {
+        "slug": "phone-number",
+        "name": "Phone Number",
+        "uuid": "09a9ab8e-acaf-4f3d-96ff-789321a53785",
+        "prerequisites": [],
+        "difficulty": 1,
+        "topics": [
+          "conditionals",
+          "pattern_matching",
+          "strings"
+        ]
+      },
+      {
+        "slug": "raindrops",
+        "name": "Raindrops",
+        "uuid": "f0ce38ee-402f-451d-abd0-e3dc56d5cde4",
+        "prerequisites": [],
+        "difficulty": 1,
+        "topics": [
+          "modulo"
+        ]
+      },
+      {
+        "slug": "scrabble-score",
+        "name": "Scrabble Score",
+        "uuid": "c956e70b-4e34-451b-9374-19b9f2aefa37",
+        "prerequisites": [],
+        "difficulty": 1,
+        "topics": [
+          "chars",
+          "strings"
+        ]
+      },
+      {
+        "slug": "acronym",
+        "name": "Acronym",
+        "uuid": "79a091fa-7987-44e1-9146-fffa28352ee2",
+        "prerequisites": [],
+        "difficulty": 2,
+        "topics": [
+          "chars",
+          "strings"
+        ]
+      },
+      {
+        "slug": "diamond",
+        "name": "Diamond",
+        "uuid": "bbaa71d1-be6a-444f-8661-006a40ef8a09",
+        "prerequisites": [],
+        "difficulty": 2,
+        "topics": [
+          "strings"
+        ]
+      },
+      {
+        "slug": "etl",
+        "name": "Etl",
+        "uuid": "750d7b11-8201-4a83-b743-f2751d1743f6",
+        "prerequisites": [],
+        "difficulty": 2,
+        "topics": [
+          "maps"
+        ]
+      },
+      {
+        "slug": "triangle",
+        "name": "Triangle",
+        "uuid": "d8d3d3dd-01f8-4289-afe2-60595a580240",
+        "prerequisites": [],
+        "difficulty": 2,
+        "topics": [
+          "algebraic_data_types",
+          "type_classes"
+        ]
+      },
+      {
+        "slug": "allergies",
+        "name": "Allergies",
+        "uuid": "9270773b-20f0-4e82-b0fd-e651af9d8415",
+        "prerequisites": [],
+        "difficulty": 3,
+        "topics": [
+          "bitwise_operations",
+          "maps"
+        ]
+      },
+      {
+        "slug": "all-your-base",
+        "name": "All Your Base",
+        "uuid": "79011a26-c8b8-4fea-bdce-f8e3d37bee23",
+        "prerequisites": [],
+        "difficulty": 4,
+        "topics": [
+          "base_conversion",
+          "math"
+        ]
+      },
+      {
+        "slug": "largest-series-product",
+        "name": "Largest Series Product",
+        "uuid": "78527833-8200-4085-8427-650aafb1990c",
+        "prerequisites": [],
+        "difficulty": 4,
+        "topics": [
+          "math",
+          "strings"
+        ]
+      },
+      {
+        "slug": "pascals-triangle",
+        "name": "Pascals Triangle",
+        "uuid": "83b533f1-a712-4d6a-bc97-505c6e7c9161",
+        "prerequisites": [],
+        "difficulty": 4,
+        "topics": [
+          "arrays",
+          "math"
+        ]
+      },
+      {
+        "slug": "binary-search",
+        "name": "Binary Search",
+        "uuid": "0029ced5-503b-4491-a309-7f0176598dd0",
+        "prerequisites": [],
+        "difficulty": 5,
+        "topics": [
+          "algorithms",
+          "binary_search"
+        ]
+      },
+      {
+        "slug": "bracket-push",
+        "name": "Bracket Push",
+        "uuid": "dd60d894-9bab-4d53-96a2-11e77aa3e7f8",
+        "prerequisites": [],
+        "difficulty": 5,
+        "topics": [
+          "dates"
+        ]
+      },
+      {
+        "slug": "crypto-square",
+        "name": "Crypto Square",
+        "uuid": "e4f49f2e-87bd-4506-9184-d90bec0adde5",
+        "prerequisites": [],
+        "difficulty": 5,
+        "topics": [
+          "matrices",
+          "strings"
+        ]
+      },
+      {
+        "slug": "word-count",
+        "name": "Word Count",
+        "uuid": "d9bda7fe-51c1-42f0-9631-fcb7ddd163b8",
+        "prerequisites": [],
+        "difficulty": 5,
+        "topics": [
+          "maps",
+          "regex",
+          "strings"
+        ]
+      },
+      {
+        "slug": "meetup",
+        "name": "Meetup",
+        "uuid": "d0942b01-fe68-46b3-be66-8e19592f666b",
+        "prerequisites": [],
+        "difficulty": 7,
+        "topics": [
+          "dates"
+        ]
+      }
+    ]
+  }
 }
