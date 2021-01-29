@@ -1,6 +1,12 @@
 {
   "language": "PureScript",
   "active": true,
+  "status": {
+    "concept_exercises": false,
+    "test_runner": false,
+    "representer": false,
+    "analyzer": false
+  },
   "blurb": "A strongly-typed functional programming language that compiles to JavaScript",
   "version": 3,
   "exercises": [
