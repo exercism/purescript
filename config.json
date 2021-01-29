@@ -1,5 +1,6 @@
 {
   "language": "PureScript",
+  "slug": "purescript",
   "active": true,
   "status": {
     "concept_exercises": false,
