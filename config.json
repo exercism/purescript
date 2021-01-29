@@ -22,7 +22,8 @@
         "concepts": [
           "booleans"
         ],
-        "prerequisites": []
+        "prerequisites": [],
+        "status": "wip"
       }
     ],
     "practice": [
