@@ -3,7 +3,7 @@
 Several of the compiler errors/warnings provide a suggestion of how to fix the issue, not only in the textual
 ouput of the compiler, but in the JSON output in a machine-usable format.
 
-### Supported tools
+## Supported tools
 
 - [purescript-suggest](https://github.com/nwolverson/purescript-suggest) - command line tool which can display or apply all suggestions at once
 - [pscid](https://github.com/kRITZCREEK/pscid#suggestions) - apply a single suggestion on a keypress
@@ -12,7 +12,7 @@ ouput of the compiler, but in the JSON output in a machine-usable format.
 - [atom-ide-purescript](https://github.com/nwolverson/atom-ide-purescript#error-suggestions--quick-fix)
 - [vscode-ide-purescript](https://github.com/nwolverson/vscode-ide-purescript)
 
-### Fixable issues
+## Fixable issues
 
 Classes of issues with support for auto-fix suggestions:
 
