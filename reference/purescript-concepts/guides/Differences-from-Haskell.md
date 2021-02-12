@@ -1,3 +1,5 @@
+# differences from haskell
+
 ## Evaluation strategy
 
 Unlike Haskell, PureScript is strictly evaluated.

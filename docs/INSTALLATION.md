@@ -1,3 +1,5 @@
+# Installation
+
 The simplest way to install PureScript is via Node.js and NPM.
 
 If you don't already have Node.js installed on your computer, you can download

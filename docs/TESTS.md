@@ -1,3 +1,5 @@
+# Tests
+
 The Purescript exercise test suites may be run from the exercise directory
 using the pulp tool.
 
