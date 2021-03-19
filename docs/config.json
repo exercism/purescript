@@ -1,0 +1,25 @@
+{
+  "docs": [
+    {
+      "uuid": "6afa7261-3500-4d76-b9dd-2bff009d1599",
+      "slug": "installation",
+      "path": "docs/INSTALLATION.md",
+      "title": "Installing PureScript locally",
+      "blurb": "Learn how to install PureScript locally to solve Exercism's exercises on your own machine"
+    },
+    {
+      "uuid": "37792dea-e8e2-4ccf-9dce-ab2af6c96100",
+      "slug": "learning",
+      "path": "docs/LEARNING.md",
+      "title": "How to learn PureScript",
+      "blurb": "An overview of how to get started from scratch with PureScript"
+    },
+    {
+      "uuid": "de68bd29-9059-42e8-8c93-8cbb3ac30cf6",
+      "slug": "tests",
+      "path": "docs/TESTS.md",
+      "title": "Testing on the PureScript track",
+      "blurb": "Learn how to test your PureScript exercises on Exercism"
+    }
+  ]
+}
