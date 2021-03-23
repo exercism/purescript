@@ -1,10 +1,7 @@
 {
   "blurb": "TODO: add blurb for booleans exercise",
   "authors": [
-    {
-      "github_username": "aimorris",
-      "exercism_username": "aimorris"
-    }
+    "aimorris"
   ],
   "forked_from": [
     "javascript/booleans"
