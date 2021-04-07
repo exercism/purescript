@@ -1,8 +1,14 @@
 {
   "authors": [],
   "files": {
-    "solution": [],
-    "test": [],
-    "example": []
+    "solution": [
+      "src/BracketPush.purs"
+    ],
+    "test": [
+      "test/BracketPush.purs"
+    ],
+    "example": [
+      "examples/src/BracketPush.purs"
+    ]
   }
 }
