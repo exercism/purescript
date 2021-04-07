@@ -14,6 +14,20 @@
     "indent_style": "space",
     "indent_size": 2
   },
+  "files": {
+    "solution": [
+      "src/%{pascal_slug}.purs"
+    ],
+    "test": [
+      "test/%{pascal_slug}.purs"
+    ],
+    "example": [
+      "examples/src/%{pascal_slug}.purs"
+    ],
+    "exemplar": [
+      ".meta/Exemplar.purs"
+    ]
+  },
   "exercises": {
     "concept": [
       {
