@@ -7,8 +7,12 @@
     "javascript/booleans"
   ],
   "files": {
-    "solution": [],
-    "test": [],
+    "solution": [
+      "src/Booleans.purs"
+    ],
+    "test": [
+      "test/Booleans.purs"
+    ],
     "exemplar": [
       ".meta/Exemplar.purs"
     ]

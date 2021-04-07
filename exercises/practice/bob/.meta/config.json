@@ -2,9 +2,15 @@
   "blurb": "Bob is a lackadaisical teenager. In conversation, his responses are very limited.",
   "authors": [],
   "files": {
-    "solution": [],
-    "test": [],
-    "example": []
+    "solution": [
+      "src/Bob.purs"
+    ],
+    "test": [
+      "test/Bob.purs"
+    ],
+    "example": [
+      "examples/src/Bob.purs"
+    ]
   },
   "source": "Inspired by the 'Deaf Grandma' exercise in Chris Pine's Learn to Program tutorial.",
   "source_url": "http://pine.fm/LearnToProgram/?Chapter=06"
