@@ -1,0 +1,51 @@
+# This workflow will do a clean install of the dependencies and run tests
+# across different versions
+#
+# Find Github Actions to setup tooling here:
+# - https://github.com/actions/?q=setup&type=&language=
+# - https://github.com/actions/starter-workflows/tree/main/ci
+# - https://github.com/marketplace?type=actions&query=setup
+#
+# Requires scripts:
+# - scripts/ci-check
+# - scripts/ci
+
+---
+name: purescript / main
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  precheck:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: |
+          Run exercism/purescript ci pre-check (checks config, lint code) for
+          all exercises
+        run: scripts/ci-check
+
+  ci:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        version: [0.13.8]
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Use PureScript compiler ${{ matrix.version }}
+        uses: purescript-contrib/setup-purescript@main
+        with:
+          purescript: ${{ matrix.version }}
+          spago: "0.19.2"
+
+      - name: Run exercism/purescript ci (runs tests) for all exercises
+        run: scripts/ci
