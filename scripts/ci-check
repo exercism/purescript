@@ -18,7 +18,7 @@ template_digest=$(openssl dgst -sha256 < ./template/packages.dhall)
 
 rc=0
 
-for packages_file in ./exercises/practice/*/packages.dhall; do
+for packages_file in ./exercises/{concept,practice}/*/packages.dhall; do
     exercise_digest=$(openssl dgst -sha256 < "${packages_file}")
 
     if [ "$template_digest" != "$exercise_digest" ]; then

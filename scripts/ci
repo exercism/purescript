@@ -16,8 +16,8 @@
 #   enforced because exercises have a unique slug. The test module names
 #   are rewritten to follow the exercise name.
 
-# ToDo:
-# - Add support for concept exercises
+# XXX(emiel) Two passes; one to prep build dir; only create target build if
+# tests exists? second to invoke tests.
 
 set -e
 set -u
@@ -33,33 +33,52 @@ if [ -z "${CI+x}" ]; then
     fi
 fi
 
+# Use a shared output and .spago directory to avoid rebuilding shared
+# dependencies. These directories are ideal candidates for caching on GitHub
+# CI...
 mkdir -p "${build_dir}"/{_output,_spago}
 
-cp -R ./exercises/practice "${build_dir}"
+cp -R ./exercises/{concept,practice} "${build_dir}"
 
-for exercise_dir in "${build_dir}/practice/"*; do
+for exercise_dir in "${build_dir}"/{concept,practice}/*; do
     exercise_slug=$(basename "${exercise_dir}")
 
-    echo ">> Working on practice/${exercise_slug}"
-
-    pushd "${exercise_dir}" > /dev/null
-
-    cp ./examples/src/*.purs ./src
-
-    # Use a shared output and .spago directory to avoid rebuilding shared
-    # dependencies. These directories are ideal candidates for caching on
-    # GitHub CI...
-    ln -s ../../_output ./output
-    ln -s ../../_spago ./.spago
+    # Determine exercise category (concept or practice)
+    exercise_category=$(basename "$(dirname "${exercise_dir}")")
 
     # XXX(emiel) Go for real pascal case; not uppercase
     exercise_pascal=$(echo "${exercise_slug}" | tr '[:lower:]' '[:upper:]' | sed -e "s/-//g")
 
+    pushd "${exercise_dir}" > /dev/null
+
+    echo ">> Working on exercise ${exercise_category}/${exercise_slug}"
+
+    # Remove stub source code
+    rm -rf ./src/*.purs
+
+    if [ "$exercise_category" = "practice" ]; then
+        # XXX(emiel) Align files between exercises categories. (move to .meta)
+        cp ./examples/src/*.purs ./src
+        cp ./test/Main.purs ./test/Main.purs.orig
+
+    elif [ "$exercise_category" = "concept" ]; then
+        # XXX(Test.purs vs Main.purs???)
+        cp ./.meta/Exemplar.purs ./src
+        mv ./test/Test.purs ./test/Main.purs.orig
+    else
+        echo "Unknown exercise category" && exit 1
+    fi
+
     # Substitute generic module name to avoid module name clash in test
-    # modules. Ideally we do this in place but haven't found a portable
-    # way to accomplish this.
-    cp ./test/Main.purs ./test/Main.purs.orig
-    sed "s/module Test.Main/module Test.${exercise_pascal}/" < ./test/Main.purs.orig > ./test/Main.purs
+    # modules. Ideally we do this in place but haven't found a portable way to
+    # accomplish this.
+    sed "s/module Test.Main/module Test.${exercise_pascal}/" \
+        < ./test/Main.purs.orig  \
+        > ./test/Main.purs
+
+    # Link up with the shared "output" and ".spago" directories
+    ln -s ../../_output ./output
+    ln -s ../../_spago ./.spago
 
     # Execute the test (and build)
     spago test -m "Test.${exercise_pascal}"
