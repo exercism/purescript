@@ -1,0 +1,194 @@
+#!/usr/bin/env node
+
+// Build and test all example solutions.
+//
+// In an ideal world we would just invoke `spago test` in each exercise
+// directory. Each exercise directory is its own project and will pull in the
+// needed dependencies and build them. This works fine but we do a lot of
+// duplicate work and makes this a lengthy operation.
+//
+// Here we optimize this process by setting up shared ".spago" and "output"
+// directories for each spago project. This does introduce some additional
+// constraints:
+//
+// - We assume the exercise projects are using the same package-set. The
+//   source-of-truth is in `./template/packages.dhall`. We validate the same
+//   package set is used with `scripts/ci-check`.
+//
+// - The module names must be unique across all exercises. This is already
+//   enforced because exercises have a unique slug. The test module names
+//   are rewritten to follow the exercise category and name.
+
+const child_process = require("child_process");
+const fs = require("fs");
+const path = require("path");
+const process = require("process");
+
+const toPascal = (kebab) => {
+  // Convert from kebab (foo-bar-qux) to pascal case (FooBarQux).
+  return kebab.replace(/^\w|-\w/g, (match, offset, string) => {
+    if (offset === 0) {
+      return match.toUpperCase();
+    } else {
+      return match[1].toUpperCase();
+    }
+  });
+};
+
+const rewriteModule = (path, fromModule, toModule) => {
+  // Rewrite PureScript module name
+  const content = fs.readFileSync(path, "utf8");
+  const regex = new RegExp(`^\\s\*module\\s\+${fromModule}`, "m");
+  const newContent = content.replace(regex, `module ${toModule}`);
+
+  fs.writeFileSync(path, newContent);
+};
+
+const prepExercise = ({ slug, category, exercisePath, buildPath }) => {
+  // Prepare an exercise for testing by creating the necessary build
+  // directories and copying over the required files. The modules are rewritten
+  // to avoid namespace clashes.
+  const pascal = toPascal(slug);
+
+  let srcSource;
+  let srcTest;
+  let testModule;
+
+  // There are some differences between concept and practice exercises and we
+  // deal with those here.
+  if (category === "concept") {
+    srcSource = path.join(exercisePath, ".meta", "Exemplar.purs");
+    srcTest = path.join(exercisePath, "test", "Test.purs");
+    testModule = `Test.Concept.${pascal}`;
+  } else if (category === "practice") {
+    srcSource = path.join(exercisePath, "examples", "src", `${pascal}.purs`);
+    srcTest = path.join(exercisePath, "test", "Main.purs");
+    testModule = `Test.Practice.${pascal}`;
+  } else {
+    throw new Error(`Unknown exercise category: ${category}`);
+  }
+
+  const exerciseBuildPath = path.join(buildPath, category, slug);
+
+  fs.mkdirSync(path.join(exerciseBuildPath, "src"), {
+    recursive: true,
+  });
+
+  fs.mkdirSync(path.join(exerciseBuildPath, "test"), {
+    recursive: true,
+  });
+
+  const dstSource = path.join(exerciseBuildPath, "src", `${pascal}.purs`);
+  fs.copyFileSync(srcSource, dstSource);
+
+  const dstTest = path.join(exerciseBuildPath, "test", `${pascal}.purs`);
+  fs.copyFileSync(srcTest, dstTest);
+
+  fs.copyFileSync(
+    path.join(exercisePath, "spago.dhall"),
+    path.join(exerciseBuildPath, "spago.dhall")
+  );
+  fs.copyFileSync(
+    path.join(exercisePath, "packages.dhall"),
+    path.join(exerciseBuildPath, "packages.dhall")
+  );
+
+  fs.symlinkSync(
+    path.join("..", "..", "_spago"),
+    path.join(exerciseBuildPath, ".spago")
+  );
+  fs.symlinkSync(
+    path.join("..", "..", "_output"),
+    path.join(exerciseBuildPath, "output")
+  );
+
+  // Rewrite test module name to prevent name clash
+  rewriteModule(dstTest, "Test.Main", testModule);
+
+  return {
+    slug: slug,
+    category: category,
+    exerciseBuildPath: exerciseBuildPath,
+    testModule: testModule,
+  };
+};
+
+const prepBuild = (buildPath, exercisesPath) => {
+  // Prepare a build directory with all the necessary bits to exercise the
+  // solution against the unit tests. We iterate over the concept and practice
+  // exercise directories to identify the exercises.
+  //
+  // Returns an array of exercise descriptions.
+  console.info(`Preparing build directory (${buildPath})...`);
+
+  if (!process.env.hasOwnProperty("CI")) {
+    // When running locally we want start with a clean slate.
+    if (fs.existsSync(buildPath)) {
+      console.info(`Found existing ${buildPath}; removing...`);
+      fs.rmSync(buildPath, { recursive: true, force: true });
+    }
+  }
+  const exercises = [];
+
+  // Use a shared output and .spago directory to avoid rebuilding shared
+  // dependencies. These directories are ideal candidates for caching on GitHub
+  // CI...
+  fs.mkdirSync(path.join(buildPath, "_output"), { recursive: true });
+  fs.mkdirSync(path.join(buildPath, "_spago"), { recursive: true });
+
+  for (const dirent of fs.readdirSync(exercisesPath, { withFileTypes: true })) {
+    if (
+      dirent.isDirectory() &&
+      (dirent.name === "concept" || dirent.name === "practice")
+    ) {
+      const categoryPath = path.join(exercisesPath, dirent.name);
+      for (const exerciseDirent of fs.readdirSync(categoryPath, {
+        withFileTypes: true,
+      })) {
+        if (exerciseDirent.isDirectory()) {
+          const exercisePath = path.join(
+            exercisesPath,
+            dirent.name,
+            exerciseDirent.name
+          );
+          if (fs.existsSync(path.join(exercisePath, "spago.dhall"))) {
+            const exercise = {
+              slug: exerciseDirent.name,
+              category: dirent.name,
+              exercisePath: exercisePath,
+              buildPath: buildPath,
+            };
+            exercises.push(prepExercise(exercise));
+          }
+        }
+      }
+    }
+  }
+
+  return exercises;
+};
+
+const testExercise = ({ exerciseBuildPath, testModule }) => {
+  // Invoke `spago test` with exercise test module.
+  console.info(`>> Testing module (${testModule})...`);
+  const child = child_process.spawnSync(
+    "spago",
+    ["test", "--main", testModule],
+    {
+      cwd: exerciseBuildPath,
+    }
+  );
+  console.log(child.stdout.toString());
+  console.log(child.stderr.toString());
+};
+
+const main = () => {
+  // Main entry point
+  const buildExercises = prepBuild("./_build", "./exercises");
+
+  buildExercises.forEach((exercise) => {
+    testExercise(exercise);
+  });
+};
+
+main();
