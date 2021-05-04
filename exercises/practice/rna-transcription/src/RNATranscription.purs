@@ -1,3 +1,0 @@
-module RNATranscription
-  ( toRNA
-  ) where

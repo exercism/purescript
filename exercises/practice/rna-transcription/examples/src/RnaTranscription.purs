@@ -1,4 +1,4 @@
-module RNATranscription
+module RnaTranscription
   ( toRNA
   ) where
 

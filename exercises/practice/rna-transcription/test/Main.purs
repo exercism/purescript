@@ -7,14 +7,14 @@ import Data.Maybe (Maybe(..))
 import Test.Unit (TestSuite, suite, test)
 import Test.Unit.Assert as Assert
 import Test.Unit.Main (runTest)
-import RNATranscription (toRNA)
+import RnaTranscription (toRNA)
 
 main :: Effect Unit
 main = runTest suites
 
 suites :: TestSuite
 suites =
-  suite "RNATranscription.toRNA" do
+  suite "RnaTranscription.toRNA" do
     test "RNA complement of cytosine is guanine" $
       Assert.equal (Just "G") (toRNA "C")
 
