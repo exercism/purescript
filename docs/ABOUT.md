@@ -1,3 +1,5 @@
+# About
+
 PureScript is a purely functional, statically-typed programming language with global type inference.
 
 **Functional** means that functions are first-class values.

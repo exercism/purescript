@@ -1,3 +1,5 @@
+# Ffi
+
 ---
 title: The Foreign Function Interface
 author: Phil Freeman
@@ -6,11 +8,11 @@ published: 2015-07-15
 
 In this short post, I'll show how to interoperate with Javascript code using PureScript's Foreign Function Interface (or _FFI_). We'll see how to call Javascript code from PureScript code and vice versa.
 
-#### Disclaimer
+### Disclaimer
 
 It should be said that choosing to work with Javascript via the FFI will "void the warranty" of the typechecker to a certain extent. Once you step outside the safe confines of the PureScript type system, nothing is guaranteed, so it is recommended that you know a few basics of the language implementation before writing your own FFI bindings. That said, the correspondence between PureScript types and their Javascript representations is fairly simple, so it should not be too difficult to understand.
 
-#### Calling PureScript from Javascript
+### Calling PureScript from Javascript
 
 Calling a PureScript function from Javascript is very simple, at least for functions with simple types.
 
@@ -46,7 +48,7 @@ var Test = PS.Test
 Test.gcd(15)(20)
 ```
 
-#### Understanding Name Generation
+### Understanding Name Generation
 
 PureScript aims to preserve names during code generation as much as possible. In particular, most identifiers which are neither PureScript nor Javascript keywords can be expected to be preserved, at least for names of top-level declarations.
 
@@ -74,13 +76,13 @@ generates the following Javascript:
 var example$prime = 100
 ```
 
-#### Calling Javascript from PureScript
+### Calling Javascript from PureScript
 
 Javascript values and functions can be used from PureScript by using the FFI. The problem becomes how to choose suitable types for values originating in Javascript.
 
 The general rule regarding types is that you can enforce as little or as much type safety as you like when using the FFI, but you should be careful to avoid common pitfalls when dealing with Javascript values, like the possibility of null or undefined values being returned from a Javascript function. Functions defined in the Prelude and core libraries tend to err on the side of type safety where possible.
 
-#### Foreign Modules
+### Foreign Modules
 
 In PureScript, JavaScript code is wrapped using a _foreign module_. A foreign module is just a CommonJS module which is associated with a PureScript module. Foreign modules are required to adhere to certain conventions:
 
@@ -107,7 +109,7 @@ foreign import calculateInterest :: Number -> Number
 
 In the companion PureScript module, we simply assign a type to the exports of the foreign module by using a `foreign import` declaration. These values are then available to modules which `import` our PureScript module.
 
-#### Functions of Multiple Arguments
+### Functions of Multiple Arguments
 
 PureScript functions are curried by default, so Javascript functions of multiple arguments require special treatment.
 
@@ -156,7 +158,7 @@ This time, we can assign the curried function type directly:
 foreign import calculateInterest :: Number -> Number -> Number
 ```
 
-#### Handling Constrained Types
+### Handling Constrained Types
 
 Another special case that you should be aware of when calling PureScript functions from Javascript is that values with constrained types (i.e. types which contain type class constraints) contain extra parameters which are used to pass type class dictionaries to the function.
 
@@ -196,7 +198,7 @@ We can call this function from Javascript by passing an explicit type class dict
 var test = Test.inOrder(Prelude.ordNumber())(20)(10)
 ```
 
-#### Handling Side Effects
+### Handling Side Effects
 
 Notice that the `calculateInterest` functions defined above were _pure_: they had no side-effects and produced the same result for the same input on every invocation.
 
@@ -204,13 +206,13 @@ The PureScript function type `a -> b` does not allow for side-effects, so it wou
 
 The `Effect` type constructor and its usage is documented [on Pursuit](https://pursuit.purescript.org/packages/purescript-effect).
 
-#### Santizing Foreign Data With Data.Foreign
+### Santizing Foreign Data With Data.Foreign
 
 Data returned from Javascript functions cannot generally be trusted to be defined and non-null. PureScript functions in the Prelude and common libraries generally assume that values will be neither `undefined` nor `null`, so it is important to sanitize data when working with values returned from Javascript functions using the FFI.
 
 The `Data.Foreign` module (available in the `purescript-foreign` package) defines a `Foreign` data type, and several helper functions for turning `Foreign` values into regular PureScript values, as well as support for handling `null` and `undefined` using the `Maybe` type constructor.
 
-#### Defining Foreign Data Types
+### Defining Foreign Data Types
 
 It is often useful when wrapping Javascript APIs to create new types at a specific kind for use with the FFI.
 
@@ -228,7 +230,7 @@ foreign import makeFrob :: String -> Frob
 
 Developers who define their own foreign data types should take care to document their expected runtime representations.
 
-#### Conclusion
+### Conclusion
 
 I have hopefully shown that interoperating with Javascript is simple in both directions, once a few small implementation details are understood. You should now be able to wrap your Javascript libraries for use in PureScript, and vice versa.
 

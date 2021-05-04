@@ -1,3 +1,5 @@
+# Learning
+
 The [PureScript Documentation Repo](https://github.com/purescript/documentation/)
 should be your first step if you are interested in learning PureScript.
 
