@@ -1,8 +1,4 @@
-{-
-Welcome to a Spago project!
-You can edit this file as you like.
--}
-{ name = "template"
+{ name = "exercise-template"
 , dependencies =
   [ "arrays"
   , "console"
