@@ -1,0 +1,75 @@
+#!/usr/bin/env bash
+
+# Build and test all example solutions.
+#
+# In an ideal world we would just invoke `spago test` in each exercise
+# directory. Each exercise directory is its own project and will pull in the
+# needed dependencies and build them. This works fine but we do a lot of
+# duplicate work and makes this a lengthy operation.
+#
+# Here we optimize this process by downloading and pre-compiling a shared set
+# of package dependencies. This does introduce some additional constraints:
+#
+# - We assume the exercise projects are using the same package-set. The
+#   source-of-truth is in `./template/packages.dhall`. We validate the same
+#   package set is used with `scripts/ci-check`.
+
+set -e
+set -u
+set -o pipefail
+
+base_dir=$(builtin cd "${BASH_SOURCE%/*}/.." || exit; pwd)
+build_dir=${base_dir}/_build
+
+# Pre-compile shared package dependencies
+#
+# Our first order of business is to pre-compile the dependencies. We can then
+# copy the `output` directory to each exercise and spare us from rebuilding the
+# dependencies for each exercise.
+
+if [ -z "${CI+x}" ]; then
+    # When running locally we want start with a clean slate.
+    if [ -d "${build_dir}" ]; then
+        echo "Found existing ${build_dir}; removing..."
+        rm -rf "${build_dir}"
+    fi
+fi
+
+# We use the template exercise project as the source of truth for shared
+# dependencies.
+cp -R ./template "${build_dir}"
+pushd "${build_dir}" > /dev/null || exit
+echo "Fetching and compiling shared dependencies..."
+spago --no-psa build --deps-only
+popd > /dev/null || exit
+
+# Iterate over each exercise solution and invoke `spago test`.
+for config in ./exercises/*/*/.solution.dhall; do
+    exercise_dir=$(dirname "${config}")
+    pushd "${exercise_dir}" > /dev/null || exit
+
+    echo ""
+    echo "Working in: ${exercise_dir}"
+    echo ""
+
+    if [ -h .spago ] || [ -d .spago ]; then
+        echo "Removing existing spago local cache..."
+        rm -rf .spago
+    fi
+
+    ln -s "${build_dir}/.spago" .spago
+
+    if [ -e "output" ]; then
+        echo "Removing existing output..."
+        rm -rf output
+    fi
+
+    # We must preserve timestamps else `purs` will invalidate the cache and
+    # force a rebuild.
+    cp -R -p "${build_dir}/output" .
+
+    # Build and test the solution
+    spago --no-psa --config .solution.dhall test
+
+    popd > /dev/null || exit
+done
