@@ -1,0 +1,36 @@
+- name: "bug"
+  description: ""
+  color: "ee0701"
+
+- name: "duplicate"
+  description: ""
+  color: "cccccc"
+
+- name: "enhancement"
+  description: ""
+  color: "84b6eb"
+
+- name: "help wanted"
+  description: ""
+  color: "128A0C"
+
+- name: "invalid"
+  description: ""
+  color: "e6e6e6"
+
+- name: "pinned"
+  description: ""
+  color: "ffffff"
+
+- name: "question"
+  description: ""
+  color: "cc317c"
+
+- name: "v3-migration 🤖"
+  description: "Preparing for Exercism v3"
+  color: "E99695"
+
+- name: "wontfix"
+  description: ""
+  color: "ffffff"
+
