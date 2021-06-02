@@ -390,5 +390,16 @@
     }
   ],
   "key_features": [],
-  "tags": []
+  "tags": [
+    "execution_mode/compiled",
+    "paradigm/functional",
+    "platform/linux",
+    "platform/mac",
+    "platform/web",
+    "platform/windows",
+    "runtime/language_specific",
+    "typing/static",
+    "used_for/frontends",
+    "used_for/web_development"
+  ]
 }
