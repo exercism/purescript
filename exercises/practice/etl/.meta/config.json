@@ -2,15 +2,9 @@
   "blurb": "We are going to do the `Transform` step of an Extract-Transform-Load.",
   "authors": [],
   "files": {
-    "solution": [
-      "src/Etl.purs"
-    ],
-    "test": [
-      "test/Etl.purs"
-    ],
-    "example": [
-      "examples/src/Etl.purs"
-    ]
+    "solution": ["src/Etl.purs"],
+    "test": ["test/Main.purs"],
+    "example": ["examples/src/Etl.purs"]
   },
   "source": "The Jumpstart Lab team",
   "source_url": "http://jumpstartlab.com"

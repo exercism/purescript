@@ -2,15 +2,9 @@
   "blurb": "Given a year, report if it is a leap year.",
   "authors": [],
   "files": {
-    "solution": [
-      "src/Leap.purs"
-    ],
-    "test": [
-      "test/Leap.purs"
-    ],
-    "example": [
-      "examples/src/Leap.purs"
-    ]
+    "solution": ["src/Leap.purs"],
+    "test": ["test/Main.purs"],
+    "example": ["examples/src/Leap.purs"]
   },
   "source": "JavaRanch Cattle Drive, exercise 3",
   "source_url": "http://www.javaranch.com/leap.jsp"

@@ -2,15 +2,9 @@
   "blurb": "Determine if a word or phrase is an isogram.",
   "authors": [],
   "files": {
-    "solution": [
-      "src/Isogram.purs"
-    ],
-    "test": [
-      "test/Isogram.purs"
-    ],
-    "example": [
-      "examples/src/Isogram.purs"
-    ]
+    "solution": ["src/Isogram.purs"],
+    "test": ["test/Main.purs"],
+    "example": ["examples/src/Isogram.purs"]
   },
   "source": "Wikipedia",
   "source_url": "https://en.wikipedia.org/wiki/Isogram"

@@ -23,7 +23,7 @@
       "src/%{pascal_slug}.purs"
     ],
     "test": [
-      "test/%{pascal_slug}.purs"
+      "test/Main.purs"
     ],
     "example": [
       "examples/src/%{pascal_slug}.purs"

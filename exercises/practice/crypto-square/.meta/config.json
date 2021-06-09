@@ -2,15 +2,9 @@
   "blurb": "Implement the classic method for composing secret messages called a square code.",
   "authors": [],
   "files": {
-    "solution": [
-      "src/CryptoSquare.purs"
-    ],
-    "test": [
-      "test/CryptoSquare.purs"
-    ],
-    "example": [
-      "examples/src/CryptoSquare.purs"
-    ]
+    "solution": ["src/CryptoSquare.purs"],
+    "test": ["test/Main.purs"],
+    "example": ["examples/src/CryptoSquare.purs"]
   },
   "source": "J Dalbey's Programming Practice problems",
   "source_url": "http://users.csc.calpoly.edu/~jdalbey/103/Projects/ProgrammingPractice.html"
