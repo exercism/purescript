@@ -11,7 +11,7 @@
       "src/Booleans.purs"
     ],
     "test": [
-      "test/Booleans.purs"
+      "test/Main.purs"
     ],
     "exemplar": [
       ".meta/Exemplar.purs"
