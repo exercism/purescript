@@ -16,7 +16,7 @@
     "highlightjs_language": "haskell"
   },
   "test_runner": {
-    "average_run_time": 3
+    "average_run_time": 3.0
   },
   "files": {
     "solution": [
@@ -36,6 +36,7 @@
     "concept": [
       {
         "slug": "booleans",
+        "name": "Booleans",
         "uuid": "f1eb2cab-d6bc-447a-bce3-6780c44e4b22",
         "concepts": [
           "booleans"
