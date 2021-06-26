@@ -1,4 +1,4 @@
-module BracketPush
+module MatchingBrackets
   ( isPaired
   ) where
 

@@ -6,14 +6,14 @@ import Effect (Effect)
 import Test.Unit.Assert as Assert
 import Test.Unit (TestSuite, suite, test)
 import Test.Unit.Main (runTest)
-import BracketPush (isPaired)
+import MatchingBrackets (isPaired)
 
 main :: Effect Unit
 main = runTest suites
 
 suites :: TestSuite
 suites = do
-  suite "BracketPush.isPaired" do
+  suite "MatchingBrackets.isPaired" do
 
     test "paired square brackets" $
       Assert.equal true

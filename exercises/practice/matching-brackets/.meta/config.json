@@ -1,0 +1,10 @@
+{
+  "blurb": "Make sure the brackets and braces all match.",
+  "source": "Ginna Baker",
+  "authors": [],
+  "files": {
+    "solution": ["src/MatchingBrackets.purs"],
+    "test": ["test/Main.purs"],
+    "example": ["examples/src/MatchingBrackets.purs"]
+  }
+}
