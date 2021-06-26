@@ -334,8 +334,8 @@
         ]
       },
       {
-        "slug": "bracket-push",
-        "name": "Bracket Push",
+        "slug": "matching-brackets",
+        "name": "Matching Brackets",
         "uuid": "dd60d894-9bab-4d53-96a2-11e77aa3e7f8",
         "practices": [],
         "prerequisites": [],

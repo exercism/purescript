@@ -1,0 +1,3 @@
+module MatchingBrackets
+  ( isPaired
+  ) where

@@ -1,5 +1,5 @@
 {
-  "name": "bracket-push",
+  "name": "matching-brackets",
   "ignore": [
     "**/.*",
     "node_modules",
