@@ -4,7 +4,7 @@
   "active": true,
   "status": {
     "concept_exercises": false,
-    "test_runner": false,
+    "test_runner": true,
     "representer": false,
     "analyzer": false
   },
@@ -12,12 +12,31 @@
   "version": 3,
   "online_editor": {
     "indent_style": "space",
-    "indent_size": 2
+    "indent_size": 2,
+    "highlightjs_language": "haskell"
+  },
+  "test_runner": {
+    "average_run_time": 3.0
+  },
+  "files": {
+    "solution": [
+      "src/%{pascal_slug}.purs"
+    ],
+    "test": [
+      "test/Main.purs"
+    ],
+    "example": [
+      "examples/src/%{pascal_slug}.purs"
+    ],
+    "exemplar": [
+      ".meta/Exemplar.purs"
+    ]
   },
   "exercises": {
     "concept": [
       {
         "slug": "booleans",
+        "name": "Booleans",
         "uuid": "f1eb2cab-d6bc-447a-bce3-6780c44e4b22",
         "concepts": [
           "booleans"
@@ -315,8 +334,8 @@
         ]
       },
       {
-        "slug": "bracket-push",
-        "name": "Bracket Push",
+        "slug": "matching-brackets",
+        "name": "Matching Brackets",
         "uuid": "dd60d894-9bab-4d53-96a2-11e77aa3e7f8",
         "practices": [],
         "prerequisites": [],
@@ -371,5 +390,16 @@
     }
   ],
   "key_features": [],
-  "tags": []
+  "tags": [
+    "execution_mode/compiled",
+    "paradigm/functional",
+    "platform/linux",
+    "platform/mac",
+    "platform/web",
+    "platform/windows",
+    "runtime/language_specific",
+    "typing/static",
+    "used_for/frontends",
+    "used_for/web_development"
+  ]
 }
