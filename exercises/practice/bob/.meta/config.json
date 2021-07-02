@@ -1,6 +1,14 @@
 {
   "blurb": "Bob is a lackadaisical teenager. In conversation, his responses are very limited.",
-  "authors": [],
+  "authors": [
+    "lpil"
+  ],
+  "contributors": [
+    "colinwahl",
+    "icyrockcom",
+    "joshburgess",
+    "spicydonuts"
+  ],
   "files": {
     "solution": ["src/Bob.purs"],
     "test": ["test/Main.purs"],

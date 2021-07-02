@@ -1,6 +1,14 @@
 {
   "blurb": "Given a phrase, count the occurrences of each word in that phrase.",
-  "authors": [],
+  "authors": [
+    "icyrockcom"
+  ],
+  "contributors": [
+    "colinwahl",
+    "lpil",
+    "paf31",
+    "spicydonuts"
+  ],
   "files": {
     "solution": ["src/WordCount.purs"],
     "test": ["test/Main.purs"],

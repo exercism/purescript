@@ -1,6 +1,14 @@
 {
   "blurb": "Convert a number, represented as a sequence of digits in one base, to any other base.",
-  "authors": [],
+  "authors": [
+    "icyrockcom"
+  ],
+  "contributors": [
+    "colinwahl",
+    "lpil",
+    "paf31",
+    "spicydonuts"
+  ],
   "files": {
     "solution": ["src/AllYourBase.purs"],
     "test": ["test/Main.purs"],

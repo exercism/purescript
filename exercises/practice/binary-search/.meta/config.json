@@ -1,6 +1,14 @@
 {
   "blurb": "Implement a binary search algorithm.",
-  "authors": [],
+  "authors": [
+    "icyrockcom"
+  ],
+  "contributors": [
+    "colinwahl",
+    "lpil",
+    "paf31",
+    "spicydonuts"
+  ],
   "files": {
     "solution": ["src/BinarySearch.purs"],
     "test": ["test/Main.purs"],

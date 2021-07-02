@@ -1,6 +1,12 @@
 {
   "blurb": "We are going to do the `Transform` step of an Extract-Transform-Load.",
-  "authors": [],
+  "authors": [
+    "icyrockcom"
+  ],
+  "contributors": [
+    "colinwahl",
+    "spicydonuts"
+  ],
   "files": {
     "solution": ["src/Etl.purs"],
     "test": ["test/Main.purs"],

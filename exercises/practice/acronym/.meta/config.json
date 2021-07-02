@@ -1,6 +1,14 @@
 {
   "blurb": "Convert a long phrase to its acronym",
-  "authors": [],
+  "authors": [
+    "lpil"
+  ],
+  "contributors": [
+    "colinwahl",
+    "icyrockcom",
+    "paf31",
+    "spicydonuts"
+  ],
   "files": {
     "solution": ["src/Acronym.purs"],
     "test": ["test/Main.purs"],

@@ -1,6 +1,14 @@
 {
   "blurb": "Create an implementation of the atbash cipher, an ancient encryption system created in the Middle East.",
-  "authors": [],
+  "authors": [
+    "icyrockcom"
+  ],
+  "contributors": [
+    "colinwahl",
+    "lpil",
+    "paf31",
+    "spicydonuts"
+  ],
   "files": {
     "solution": ["src/AtbashCipher.purs"],
     "test": ["test/Main.purs"],

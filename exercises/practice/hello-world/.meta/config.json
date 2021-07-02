@@ -1,6 +1,14 @@
 {
   "blurb": "The classical introductory exercise. Just say \"Hello, World!\"",
-  "authors": [],
+  "authors": [
+    "lpil"
+  ],
+  "contributors": [
+    "colinwahl",
+    "icyrockcom",
+    "kytrinyx",
+    "spicydonuts"
+  ],
   "files": {
     "solution": ["src/HelloWorld.purs"],
     "test": ["test/Main.purs"],

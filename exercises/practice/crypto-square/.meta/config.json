@@ -1,6 +1,12 @@
 {
   "blurb": "Implement the classic method for composing secret messages called a square code.",
-  "authors": [],
+  "authors": [
+    "icyrockcom"
+  ],
+  "contributors": [
+    "colinwahl",
+    "spicydonuts"
+  ],
   "files": {
     "solution": ["src/CryptoSquare.purs"],
     "test": ["test/Main.purs"],

@@ -1,6 +1,13 @@
 {
   "blurb": "Calculate the date of meetups.",
-  "authors": [],
+  "authors": [
+    "icyrockcom"
+  ],
+  "contributors": [
+    "colinwahl",
+    "lpil",
+    "spicydonuts"
+  ],
   "files": {
     "solution": ["src/Meetup.purs"],
     "test": ["test/Main.purs"],

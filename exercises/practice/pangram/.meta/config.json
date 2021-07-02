@@ -1,6 +1,14 @@
 {
   "blurb": "Determine if a sentence is a pangram.",
-  "authors": [],
+  "authors": [
+    "lpil"
+  ],
+  "contributors": [
+    "colinwahl",
+    "icyrockcom",
+    "paf31",
+    "spicydonuts"
+  ],
   "files": {
     "solution": ["src/Pangram.purs"],
     "test": ["test/Main.purs"],
