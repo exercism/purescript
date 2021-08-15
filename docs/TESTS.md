@@ -1,8 +1,14 @@
 # Tests
 
-The Purescript exercise test suites may be run from the exercise directory
-using the pulp tool.
+The PureScript exercise test suites may be run from the exercise directory
+using the spago tool:
 
-    cd exercism/project/directory/purescript/hello-world
-    bower install
-    pulp test
+    cd <exercism-workspace>/purescript/<exercise name>
+    spago test
+
+where <exercism-workspace> is the CLI's workspace directory.
+
+For example:
+
+    cd ~/exercism/purescript/accumulate
+    spago test
