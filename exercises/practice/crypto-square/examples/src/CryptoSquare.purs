@@ -8,12 +8,12 @@ module CryptoSquare
 import Prelude
 import Data.Array as A
 import Data.Array (filter, fromFoldable, replicate, toUnfoldable, (:))
-import Data.Char.Unicode (isAlphaNum)
+import Data.CodePoint.Unicode (isAlphaNum)
 import Data.Foldable (maximum)
 import Data.Int (ceil, toNumber)
 import Data.List (transpose)
 import Data.Maybe (fromMaybe)
-import Data.String (drop, joinWith, length, take)
+import Data.String (codePointFromChar, drop, joinWith, length, take)
 import Data.String.Common (toLower)
 import Data.String.CodeUnits (fromCharArray, toCharArray)
 import Math (sqrt)
@@ -21,7 +21,7 @@ import Math (sqrt)
 normalizedPlaintext :: String -> String
 normalizedPlaintext
   = toCharArray
-    >>> filter isAlphaNum
+    >>> filter (isAlphaNum <<< codePointFromChar)
     >>> fromCharArray
     >>> toLower
 

@@ -4,13 +4,14 @@ module AtbashCipher
   ) where
 
 import Prelude
+
 import Data.Array (drop, filter, take, zip, (:))
-import Data.Char.Unicode (isPunctuation, isSpace)
+import Data.CodePoint.Unicode (isPunctuation, isSpace)
 import Data.Map (Map, fromFoldable, lookup)
 import Data.Maybe (Maybe)
-import Data.String (joinWith)
-import Data.String.Common (toLower)
+import Data.String (codePointFromChar, joinWith)
 import Data.String.CodeUnits (fromCharArray, toCharArray)
+import Data.String.Common (toLower)
 import Data.Traversable (traverse)
 
 plain :: Array Char
@@ -31,12 +32,12 @@ decode s = fromCharArray <$> dec (toCharArray s)
               >>> traverse (_ `lookup` decMap)
 
 chunks :: forall a. Int -> Array a -> Array (Array a)
-chunks n [] = []
+chunks _ [] = []
 chunks n a = take n a : chunks n (drop n a)
 
 encode :: String -> Maybe String
 encode s = group <$> enc (toLower s # toCharArray)
-  where enc = filter (not (isPunctuation || isSpace))
+  where enc = filter (not (isPunctuation || isSpace) <<< codePointFromChar)
               >>> traverse (_ `lookup` encMap)
         group = chunks 5
                 >>> map fromCharArray

@@ -1,13 +1,12 @@
-module Bob
-  ( hey
-  ) where
+module Bob where
 
 import Prelude
-import Data.String.Common as String
+
 import Data.Either as Either
+import Data.String.Common as String
 import Data.String.Regex as Regex
 import Data.String.Regex.Flags (noFlags)
-import Partial.Unsafe as Partial
+import Partial.Unsafe (unsafeCrashWith)
 
 hey :: String -> String
 hey msg =
@@ -44,6 +43,5 @@ isSilence =
 testRegex :: String -> String -> Boolean
 testRegex patternStr =
   Regex.test
-  $ Partial.unsafePartial
-  $ Either.fromRight
+  $ Either.either (\_ -> unsafeCrashWith "Invalid regex pattern") identity
   $ Regex.regex patternStr noFlags
