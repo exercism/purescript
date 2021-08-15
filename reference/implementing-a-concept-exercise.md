@@ -45,8 +45,9 @@ languages
                 ├── src
                 |   └── <NAME>.purs
                 ├── test
-                |   └── Test.purs
-                └── bower.json
+                |   └── Main.purs
+                └── packages.dhall
+                └── spago.dhall
 </pre>
 
 ## Step 1: Add code files
@@ -54,8 +55,8 @@ languages
 These are files specific to the PureScript track:
 
 - `src/<NAME>.purs`: the stub implementation file, which is the starting point for students to work on the exercise.
-- `test/Test.purs`: the test suite.
-- `bower.json`: the bower project file.
+- `test/Main.purs`: the test suite.
+- `packages.dhall` and `spago.dhall`: spago upstream package-set and packages declarations
 - `.meta/Exemplar.purs`: an exemplar implementation that passes all the tests.
 
 ## Step 2: Add documentation files

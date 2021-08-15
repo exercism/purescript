@@ -1,16 +1,9 @@
+**/.psa*
+**/.psc*
+**/.pulp-cache/
+**/node_modules/
+**/npm-debug.log
+**/output
 *.swp
 .DS_Store
-bin/configlet
-bin/configlet.exe
-
-**/npm-debug.log
-
-# Purescript artifact directories
-**/bower_components
-**/node_modules/
-**/.pulp-cache/
-**/output
-**/.psc*
-**/.psa*
-
-.work
+.build
