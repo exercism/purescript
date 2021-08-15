@@ -4,7 +4,7 @@ module Acronym
 
 import Prelude
 
-import Data.Char.Unicode as UChar
+import Data.CodePoint.Unicode as UChar
 import Data.Foldable (foldl)
 import Data.List (List)
 import Data.List as List
@@ -27,8 +27,8 @@ classify :: Char -> CharType
 classify '-' = Space
 classify ' ' = Space
 classify c
-  | UChar.isUpper c = Upper
-  | UChar.isLower c = Lower
+  | UChar.isUpper (codePointFromChar c) = Upper
+  | UChar.isLower (codePointFromChar c) = Lower
   | otherwise = Other
 
 

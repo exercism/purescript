@@ -3,7 +3,7 @@ module AllYourBase
   ) where
 
 import Prelude
-import Data.Array (all, any, head, length, range, reverse, zipWith)
+import Data.Array (all, any, length, range, reverse, take, zipWith)
 import Data.Foldable (sum)
 import Data.Int (pow)
 import Data.Maybe (Maybe(Just, Nothing))
@@ -22,7 +22,7 @@ rebase' inb oub ind =
 
 rebase :: Int -> Int -> Array Int -> Maybe (Array Int)
 rebase inb oub ind
-  | all (_ == 0) (head ind)         = Nothing
+  | all (_ == 0) (take 1 ind)       = Nothing
   | any ((_ < 0) || (inb <= _)) ind = Nothing
   | inb < 2 || oub < 2              = Nothing
   | otherwise                       = Just $ rebase' inb oub ind

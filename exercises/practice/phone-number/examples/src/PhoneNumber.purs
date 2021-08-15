@@ -3,11 +3,12 @@ module PhoneNumber
     )
     where
 
-import Prelude ((==), (<), (>>=), (&&), ($), otherwise)
-import Data.Char.Unicode (isDigit)
 import Data.Array (filter, head, tail, length, (!!))
+import Data.CodePoint.Unicode (isDecDigit)
+import Data.Maybe (Maybe(..))
+import Data.String (codePointFromChar)
 import Data.String.CodeUnits (toCharArray, fromCharArray)
-import Data.Maybe (Maybe(..), fromMaybe)
+import Prelude (otherwise, ($), (&&), (<), (<<<), (==), (>>=))
 
 clean :: String -> Maybe (Array Char)
 clean input = go where
@@ -15,7 +16,7 @@ clean input = go where
     | len == 10 = Just digits
     | len == 11 && head digits == Just '1' = tail digits
     | otherwise = Nothing
-  digits = filter isDigit $ toCharArray input
+  digits = filter (isDecDigit <<< codePointFromChar) $ toCharArray input
   len = length digits
 
 check:: Array Char -> Maybe String
