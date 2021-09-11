@@ -39,7 +39,7 @@ suites = do
         Bob.hey "It's OK if you don't want to go to the DMV."
 
     test "forceful questions" do
-      Assert.equal "Whoa, chill out!" $
+      Assert.equal "Calm down, I know what I'm doing!" $
         Bob.hey "WHAT THE HELL WERE YOU THINKING?"
 
     test "shouting numbers" do
