@@ -15,7 +15,7 @@ data Triangle
 derive instance eqTriangle :: Eq Triangle
 
 instance showTriangle :: Show Triangle where
-  show = unsafeThrow "You need to implement this function."
+  show = unsafeThrow "You need to implement `show`."
 
 triangleKind :: Int -> Int -> Int -> Either String Triangle
-triangleKind = unsafeThrow "You need to implement this function."
+triangleKind = unsafeThrow "You need to implement `triangleKind`."

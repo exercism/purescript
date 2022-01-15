@@ -6,7 +6,7 @@ module Allergies
 import Effect.Exception.Unsafe (unsafeThrow)
 
 allergicTo :: Int -> String -> Boolean
-allergicTo = unsafeThrow "You need to implement this function."
+allergicTo = unsafeThrow "You need to implement `allergicTo`."
 
 list :: Int -> Array String
-list = unsafeThrow "You need to implement this function."
+list = unsafeThrow "You need to implement `list`."
