@@ -48,7 +48,7 @@ All exercises live in `exercises` folder. Here's the standard folder structure:
 Creating a new exercise requires modification to:
 
 - `examples/src/<ExerciseName>.purs` - put your solution here
-- `src/<ExerciseName>.purs` - this should generally only have the module declaration and the exports of the functions that the solution should contain
+- `src/<ExerciseName>.purs` - this should generally only have the module declaration and the exports and signatures of the functions that the solution should contain
 
 The other two files:
 
