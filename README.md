@@ -1,4 +1,4 @@
-# purescript
+# Exercism PureScript Track
 
 Exercism problems in PureScript.
 
