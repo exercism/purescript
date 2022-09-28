@@ -15,6 +15,10 @@
     ],
     "exemplar": [
       ".meta/Exemplar.purs"
+    ],
+    "invalidator": [
+      "packages.dhall",
+      "spago.dhall"
     ]
   }
 }

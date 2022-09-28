@@ -8,9 +8,19 @@
     "spicydonuts"
   ],
   "files": {
-    "solution": ["src/Isogram.purs"],
-    "test": ["test/Main.purs"],
-    "example": ["examples/src/Isogram.purs"]
+    "solution": [
+      "src/Isogram.purs"
+    ],
+    "test": [
+      "test/Main.purs"
+    ],
+    "example": [
+      "examples/src/Isogram.purs"
+    ],
+    "invalidator": [
+      "packages.dhall",
+      "spago.dhall"
+    ]
   },
   "source": "Wikipedia",
   "source_url": "https://en.wikipedia.org/wiki/Isogram"

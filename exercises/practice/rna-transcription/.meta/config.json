@@ -8,9 +8,19 @@
     "spicydonuts"
   ],
   "files": {
-    "solution": ["src/RnaTranscription.purs"],
-    "test": ["test/Main.purs"],
-    "example": ["examples/src/RnaTranscription.purs"]
+    "solution": [
+      "src/RnaTranscription.purs"
+    ],
+    "test": [
+      "test/Main.purs"
+    ],
+    "example": [
+      "examples/src/RnaTranscription.purs"
+    ],
+    "invalidator": [
+      "packages.dhall",
+      "spago.dhall"
+    ]
   },
   "source": "Hyperphysics",
   "source_url": "http://hyperphysics.phy-astr.gsu.edu/hbase/Organic/transcription.html"

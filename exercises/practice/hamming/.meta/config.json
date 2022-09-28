@@ -10,9 +10,19 @@
     "spicydonuts"
   ],
   "files": {
-    "solution": ["src/Hamming.purs"],
-    "test": ["test/Main.purs"],
-    "example": ["examples/src/Hamming.purs"]
+    "solution": [
+      "src/Hamming.purs"
+    ],
+    "test": [
+      "test/Main.purs"
+    ],
+    "example": [
+      "examples/src/Hamming.purs"
+    ],
+    "invalidator": [
+      "packages.dhall",
+      "spago.dhall"
+    ]
   },
   "source": "The Calculating Point Mutations problem at Rosalind",
   "source_url": "http://rosalind.info/problems/hamm/"

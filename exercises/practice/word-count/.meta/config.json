@@ -10,9 +10,19 @@
     "spicydonuts"
   ],
   "files": {
-    "solution": ["src/WordCount.purs"],
-    "test": ["test/Main.purs"],
-    "example": ["examples/src/WordCount.purs"]
+    "solution": [
+      "src/WordCount.purs"
+    ],
+    "test": [
+      "test/Main.purs"
+    ],
+    "example": [
+      "examples/src/WordCount.purs"
+    ],
+    "invalidator": [
+      "packages.dhall",
+      "spago.dhall"
+    ]
   },
   "source": "This is a classic toy problem, but we were reminded of it by seeing it in the Go Tour."
 }

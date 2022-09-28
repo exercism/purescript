@@ -8,9 +8,19 @@
     "spicydonuts"
   ],
   "files": {
-    "solution": ["src/SumOfMultiples.purs"],
-    "test": ["test/Main.purs"],
-    "example": ["examples/src/SumOfMultiples.purs"]
+    "solution": [
+      "src/SumOfMultiples.purs"
+    ],
+    "test": [
+      "test/Main.purs"
+    ],
+    "example": [
+      "examples/src/SumOfMultiples.purs"
+    ],
+    "invalidator": [
+      "packages.dhall",
+      "spago.dhall"
+    ]
   },
   "source": "A variation on Problem 1 at Project Euler",
   "source_url": "http://projecteuler.net/problem=1"

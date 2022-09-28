@@ -8,9 +8,19 @@
     "spicydonuts"
   ],
   "files": {
-    "solution": ["src/Etl.purs"],
-    "test": ["test/Main.purs"],
-    "example": ["examples/src/Etl.purs"]
+    "solution": [
+      "src/Etl.purs"
+    ],
+    "test": [
+      "test/Main.purs"
+    ],
+    "example": [
+      "examples/src/Etl.purs"
+    ],
+    "invalidator": [
+      "packages.dhall",
+      "spago.dhall"
+    ]
   },
   "source": "The Jumpstart Lab team",
   "source_url": "http://jumpstartlab.com"

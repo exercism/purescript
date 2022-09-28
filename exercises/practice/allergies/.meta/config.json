@@ -10,9 +10,19 @@
     "spicydonuts"
   ],
   "files": {
-    "solution": ["src/Allergies.purs"],
-    "test": ["test/Main.purs"],
-    "example": ["examples/src/Allergies.purs"]
+    "solution": [
+      "src/Allergies.purs"
+    ],
+    "test": [
+      "test/Main.purs"
+    ],
+    "example": [
+      "examples/src/Allergies.purs"
+    ],
+    "invalidator": [
+      "packages.dhall",
+      "spago.dhall"
+    ]
   },
   "source": "Jumpstart Lab Warm-up",
   "source_url": "http://jumpstartlab.com"

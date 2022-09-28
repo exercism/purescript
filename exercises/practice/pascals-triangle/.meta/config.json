@@ -9,9 +9,19 @@
     "spicydonuts"
   ],
   "files": {
-    "solution": ["src/PascalsTriangle.purs"],
-    "test": ["test/Main.purs"],
-    "example": ["examples/src/PascalsTriangle.purs"]
+    "solution": [
+      "src/PascalsTriangle.purs"
+    ],
+    "test": [
+      "test/Main.purs"
+    ],
+    "example": [
+      "examples/src/PascalsTriangle.purs"
+    ],
+    "invalidator": [
+      "packages.dhall",
+      "spago.dhall"
+    ]
   },
   "source": "Pascal's Triangle at Wolfram Math World",
   "source_url": "http://mathworld.wolfram.com/PascalsTriangle.html"

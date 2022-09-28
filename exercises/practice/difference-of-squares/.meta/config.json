@@ -10,9 +10,19 @@
     "spicydonuts"
   ],
   "files": {
-    "solution": ["src/DifferenceOfSquares.purs"],
-    "test": ["test/Main.purs"],
-    "example": ["examples/src/DifferenceOfSquares.purs"]
+    "solution": [
+      "src/DifferenceOfSquares.purs"
+    ],
+    "test": [
+      "test/Main.purs"
+    ],
+    "example": [
+      "examples/src/DifferenceOfSquares.purs"
+    ],
+    "invalidator": [
+      "packages.dhall",
+      "spago.dhall"
+    ]
   },
   "source": "Problem 6 at Project Euler",
   "source_url": "http://projecteuler.net/problem=6"
