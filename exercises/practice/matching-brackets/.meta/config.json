@@ -3,8 +3,18 @@
   "source": "Ginna Baker",
   "authors": [],
   "files": {
-    "solution": ["src/MatchingBrackets.purs"],
-    "test": ["test/Main.purs"],
-    "example": ["examples/src/MatchingBrackets.purs"]
+    "solution": [
+      "src/MatchingBrackets.purs"
+    ],
+    "test": [
+      "test/Main.purs"
+    ],
+    "example": [
+      "examples/src/MatchingBrackets.purs"
+    ],
+    "invalidator": [
+      "packages.dhall",
+      "spago.dhall"
+    ]
   }
 }

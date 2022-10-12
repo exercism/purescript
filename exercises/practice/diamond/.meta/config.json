@@ -8,9 +8,19 @@
     "spicydonuts"
   ],
   "files": {
-    "solution": ["src/Diamond.purs"],
-    "test": ["test/Main.purs"],
-    "example": ["examples/src/Diamond.purs"]
+    "solution": [
+      "src/Diamond.purs"
+    ],
+    "test": [
+      "test/Main.purs"
+    ],
+    "example": [
+      "examples/src/Diamond.purs"
+    ],
+    "invalidator": [
+      "packages.dhall",
+      "spago.dhall"
+    ]
   },
   "source": "Seb Rose",
   "source_url": "http://claysnow.co.uk/recycling-tests-in-tdd/"

@@ -10,9 +10,19 @@
     "spicydonuts"
   ],
   "files": {
-    "solution": ["src/AtbashCipher.purs"],
-    "test": ["test/Main.purs"],
-    "example": ["examples/src/AtbashCipher.purs"]
+    "solution": [
+      "src/AtbashCipher.purs"
+    ],
+    "test": [
+      "test/Main.purs"
+    ],
+    "example": [
+      "examples/src/AtbashCipher.purs"
+    ],
+    "invalidator": [
+      "packages.dhall",
+      "spago.dhall"
+    ]
   },
   "source": "Wikipedia",
   "source_url": "http://en.wikipedia.org/wiki/Atbash"

@@ -9,9 +9,19 @@
     "spicydonuts"
   ],
   "files": {
-    "solution": ["src/Leap.purs"],
-    "test": ["test/Main.purs"],
-    "example": ["examples/src/Leap.purs"]
+    "solution": [
+      "src/Leap.purs"
+    ],
+    "test": [
+      "test/Main.purs"
+    ],
+    "example": [
+      "examples/src/Leap.purs"
+    ],
+    "invalidator": [
+      "packages.dhall",
+      "spago.dhall"
+    ]
   },
   "source": "JavaRanch Cattle Drive, exercise 3",
   "source_url": "http://www.javaranch.com/leap.jsp"

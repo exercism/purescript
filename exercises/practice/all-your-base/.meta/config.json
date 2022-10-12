@@ -10,8 +10,18 @@
     "spicydonuts"
   ],
   "files": {
-    "solution": ["src/AllYourBase.purs"],
-    "test": ["test/Main.purs"],
-    "example": ["examples/src/AllYourBase.purs"]
+    "solution": [
+      "src/AllYourBase.purs"
+    ],
+    "test": [
+      "test/Main.purs"
+    ],
+    "example": [
+      "examples/src/AllYourBase.purs"
+    ],
+    "invalidator": [
+      "packages.dhall",
+      "spago.dhall"
+    ]
   }
 }

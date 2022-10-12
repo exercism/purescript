@@ -9,9 +9,19 @@
     "spicydonuts"
   ],
   "files": {
-    "solution": ["src/Triangle.purs"],
-    "test": ["test/Main.purs"],
-    "example": ["examples/src/Triangle.purs"]
+    "solution": [
+      "src/Triangle.purs"
+    ],
+    "test": [
+      "test/Main.purs"
+    ],
+    "example": [
+      "examples/src/Triangle.purs"
+    ],
+    "invalidator": [
+      "packages.dhall",
+      "spago.dhall"
+    ]
   },
   "source": "The Ruby Koans triangle project, parts 1 & 2",
   "source_url": "http://rubykoans.com"

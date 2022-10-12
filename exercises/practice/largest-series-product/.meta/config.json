@@ -8,9 +8,19 @@
     "spicydonuts"
   ],
   "files": {
-    "solution": ["src/LargestSeriesProduct.purs"],
-    "test": ["test/Main.purs"],
-    "example": ["examples/src/LargestSeriesProduct.purs"]
+    "solution": [
+      "src/LargestSeriesProduct.purs"
+    ],
+    "test": [
+      "test/Main.purs"
+    ],
+    "example": [
+      "examples/src/LargestSeriesProduct.purs"
+    ],
+    "invalidator": [
+      "packages.dhall",
+      "spago.dhall"
+    ]
   },
   "source": "A variation on Problem 8 at Project Euler",
   "source_url": "http://projecteuler.net/problem=8"

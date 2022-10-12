@@ -9,9 +9,19 @@
     "spicydonuts"
   ],
   "files": {
-    "solution": ["src/PhoneNumber.purs"],
-    "test": ["test/Main.purs"],
-    "example": ["examples/src/PhoneNumber.purs"]
+    "solution": [
+      "src/PhoneNumber.purs"
+    ],
+    "test": [
+      "test/Main.purs"
+    ],
+    "example": [
+      "examples/src/PhoneNumber.purs"
+    ],
+    "invalidator": [
+      "packages.dhall",
+      "spago.dhall"
+    ]
   },
   "source": "Event Manager by JumpstartLab",
   "source_url": "http://tutorials.jumpstartlab.com/projects/eventmanager.html"

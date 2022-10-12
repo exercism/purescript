@@ -10,9 +10,19 @@
     "spicydonuts"
   ],
   "files": {
-    "solution": ["src/ScrabbleScore.purs"],
-    "test": ["test/Main.purs"],
-    "example": ["examples/src/ScrabbleScore.purs"]
+    "solution": [
+      "src/ScrabbleScore.purs"
+    ],
+    "test": [
+      "test/Main.purs"
+    ],
+    "example": [
+      "examples/src/ScrabbleScore.purs"
+    ],
+    "invalidator": [
+      "packages.dhall",
+      "spago.dhall"
+    ]
   },
   "source": "Inspired by the Extreme Startup game",
   "source_url": "https://github.com/rchatley/extreme_startup"
