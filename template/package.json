@@ -1,0 +1,10 @@
+{
+  "name": "excercism-purescript",
+  "version": "1.0.0",
+  "description": "Exercism exercises in PureScript.",
+  "license": "MIT",
+  "devDependencies": {
+    "purescript": "^0.14.7",
+    "spago": "^0.20.9"
+  }
+}
