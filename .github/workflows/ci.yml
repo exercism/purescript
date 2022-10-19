@@ -1,4 +1,3 @@
----
 name: purescript / main
 
 on:
@@ -14,7 +13,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout code
+        uses: actions/checkout@2541b1294d2704b0964813337f33b291d3f8596b # 3.0.2
 
       - name: |
           Run exercism/purescript ci pre-check (checks config, lint code) for
@@ -25,10 +25,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout code
+        uses: actions/checkout@2541b1294d2704b0964813337f33b291d3f8596b # 3.0.2
 
       - name: Fetch the PureScript compiler
-        uses: purescript-contrib/setup-purescript@main
+        uses: purescript-contrib/setup-purescript@606f0410645eae0fce88aaf320fc2e2f72a69bf6 # 2.0.0
         with:
           purescript: "0.14.7"
 
