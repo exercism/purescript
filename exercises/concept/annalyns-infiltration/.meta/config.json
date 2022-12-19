@@ -4,7 +4,7 @@
   ],
   "files": {
     "solution": [
-      "src/Booleans.purs"
+      "src/AnnalynsInfiltration.purs"
     ],
     "test": [
       "test/Main.purs"
