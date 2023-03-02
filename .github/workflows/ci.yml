@@ -29,7 +29,7 @@ jobs:
         uses: actions/checkout@2541b1294d2704b0964813337f33b291d3f8596b
 
       - name: Fetch the PureScript compiler
-        uses: purescript-contrib/setup-purescript@606f0410645eae0fce88aaf320fc2e2f72a69bf6
+        uses: purescript-contrib/setup-purescript@9da224ebab8e81b51be14d42606d0303b10677e0
         with:
           purescript: "0.14.7"
 
