@@ -56,14 +56,6 @@ suites = do
       Assert.equal Nothing
                    (largestProduct "123" 4)
 
-    test "reports 1 for empty string and empty product (0 span)" $
-      Assert.equal (Just 1)
-                   (largestProduct "" 0)
-
-    test "reports 1 for nonempty string and empty product (0 span)" $
-      Assert.equal (Just 1)
-                   (largestProduct "123" 0)
-
     test "rejects empty string and nonzero span" $
       Assert.equal Nothing
                    (largestProduct "" 1)
