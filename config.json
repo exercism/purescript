@@ -290,6 +290,19 @@
         ]
       },
       {
+        "slug": "anagram",
+        "name": "Anagram",
+        "uuid": "cd68e41a-31a3-4594-a1ea-7e52e2f2468e",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 4,
+        "topics": [
+          "filtering",
+          "lists",
+          "strings"
+        ]
+      },
+      {
         "slug": "all-your-base",
         "name": "All Your Base",
         "uuid": "79011a26-c8b8-4fea-bdce-f8e3d37bee23",
