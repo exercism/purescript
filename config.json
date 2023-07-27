@@ -406,7 +406,38 @@
       "name": "Booleans"
     }
   ],
-  "key_features": [],
+  "key_features": [
+    {
+      "title": "Compile to JavaScript",
+      "content": "Allowing you to use PureScript anywhere JavaScript is used.",
+      "icon": "web"
+    },
+    {
+      "title": "Functional",
+      "content": "Use functional techniques such as row polymorphism, algebraic data types, and type classes.",
+      "icon": "functional"
+    },
+    {
+      "title": "Tooling",
+      "content": "PureScript has a rich ecosystem of tools and extensions for most editors.",
+      "icon": "tooling"
+    },
+    {
+      "title": "Statically Typed",
+      "content": "PureScript is statically typed, with a powerful type system inspired by Haskell.",
+      "icon": "typing"
+    },
+    {
+      "title": "Active Community",
+      "content": "Active community of developers and users.",
+      "icon": "community"
+    },
+    {
+      "title": "Expressive",
+      "content": "PureScript has lightweight syntax which allows for expressive code",
+      "icon": "expressive"
+    }
+  ],
   "tags": [
     "execution_mode/compiled",
     "paradigm/functional",
