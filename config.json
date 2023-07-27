@@ -425,7 +425,7 @@
     {
       "title": "Statically Typed",
       "content": "PureScript is statically typed, with a powerful type system inspired by Haskell.",
-      "icon": "typing"
+      "icon": "statically-typed"
     },
     {
       "title": "Active Community",
