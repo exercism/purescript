@@ -1,6 +1,4 @@
 {
-  "blurb": "Make sure the brackets and braces all match.",
-  "source": "Ginna Baker",
   "authors": [],
   "files": {
     "solution": [
@@ -16,5 +14,7 @@
       "packages.dhall",
       "spago.dhall"
     ]
-  }
+  },
+  "blurb": "Make sure the brackets and braces all match.",
+  "source": "Ginna Baker"
 }
