@@ -10,7 +10,7 @@ on:
 
 jobs:
   precheck:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
 
     steps:
       - name: Checkout code
@@ -22,7 +22,7 @@ jobs:
         run: scripts/ci-check
 
   ci:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
 
     steps:
       - name: Checkout code
