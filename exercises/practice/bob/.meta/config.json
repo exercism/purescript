@@ -1,5 +1,4 @@
 {
-  "blurb": "Bob is a lackadaisical teenager. In conversation, his responses are very limited.",
   "authors": [
     "lpil"
   ],
@@ -24,6 +23,7 @@
       "spago.dhall"
     ]
   },
+  "blurb": "Bob is a lackadaisical teenager. In conversation, his responses are very limited.",
   "source": "Inspired by the 'Deaf Grandma' exercise in Chris Pine's Learn to Program tutorial.",
   "source_url": "http://pine.fm/LearnToProgram/?Chapter=06"
 }
