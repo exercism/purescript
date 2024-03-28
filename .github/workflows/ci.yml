@@ -14,7 +14,7 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@ac593985615ec2ede58e132d2e21d2b1cbd6127c
+        uses: actions/checkout@9bb56186c3b09b4f86b1c65136769dd318469633
 
       - name: |
           Run exercism/purescript ci pre-check (checks config, lint code) for
@@ -26,7 +26,7 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@ac593985615ec2ede58e132d2e21d2b1cbd6127c
+        uses: actions/checkout@9bb56186c3b09b4f86b1c65136769dd318469633
 
       - name: Fetch the PureScript compiler
         uses: purescript-contrib/setup-purescript@9da224ebab8e81b51be14d42606d0303b10677e0
