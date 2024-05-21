@@ -396,6 +396,14 @@
         "topics": [
           "dates"
         ]
+      },
+      {
+        "slug": "spiral-matrix",
+        "name": "Spiral Matrix",
+        "uuid": "2ff7b482-04c5-42cd-b589-98cd7cd462f7",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 5
       }
     ]
   },
