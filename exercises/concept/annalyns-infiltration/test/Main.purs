@@ -7,7 +7,7 @@ import Test.Unit (TestSuite, describe, it)
 import Test.Unit.Assert (shouldEqual)
 import Test.Unit.Main (runTest)
 
-import Booleans (canExecuteFastAttack, canSpy, canSignalPrisoner, canFreePrisoner)
+import AnnalynsInfiltration (canExecuteFastAttack, canSpy, canSignalPrisoner, canFreePrisoner)
 
 main :: Effect Unit
 main = runTest suites
