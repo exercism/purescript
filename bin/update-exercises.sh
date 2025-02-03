@@ -19,4 +19,5 @@ for config in "$exercises_dir"/*/*/spago.dhall; do
 
     sed -e "s/exercise-template/${slug}/" < "${template_dir}/spago.dhall" > "${exercise_dir}/spago.dhall"
     cp "${template_dir}/packages.dhall" "${exercise_dir}/packages.dhall"
+    cp "${template_dir}/.gitignore" "${exercise_dir}/.gitignore"
 done
