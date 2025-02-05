@@ -16,7 +16,7 @@ import Data.Maybe (fromMaybe)
 import Data.String (codePointFromChar, drop, joinWith, length, take)
 import Data.String.Common (toLower)
 import Data.String.CodeUnits (fromCharArray, toCharArray)
-import Math (sqrt)
+import Data.Number (sqrt)
 
 normalizedPlaintext :: String -> String
 normalizedPlaintext
