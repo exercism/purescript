@@ -17,11 +17,12 @@ npx spago install datetime
 npx spago install effect
 npx spago install either
 npx spago install enums
+npx spago install exceptions
 npx spago install foldable-traversable
 npx spago install integers
 npx spago install lists
-npx spago install math
 npx spago install maybe
+npx spago install numbers
 npx spago install ordered-collections
 npx spago install partial
 npx spago install prelude
