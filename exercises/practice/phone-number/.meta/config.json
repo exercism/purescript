@@ -18,8 +18,7 @@
       "examples/src/PhoneNumber.purs"
     ],
     "invalidator": [
-      "packages.dhall",
-      "spago.dhall"
+      "spago.yaml"
     ]
   },
   "blurb": "Clean up user-entered phone numbers so that they can be sent SMS messages.",

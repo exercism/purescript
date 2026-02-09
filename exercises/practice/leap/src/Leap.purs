@@ -1,8 +1,9 @@
-module Leap
-  ( isLeapYear
-  ) where
+module Leap where
 
-import Effect.Exception.Unsafe (unsafeThrow)
+import Prelude
 
 isLeapYear :: Int -> Boolean
-isLeapYear = unsafeThrow "You need to implement this function."
+isLeapYear year =
+  mod year 4 == 0 &&
+  mod year 100 /= 0 ||
+  mod year 400 == 0

@@ -5,16 +5,61 @@ module CryptoSquare
   , ciphertext
   ) where
 
-import Effect.Exception.Unsafe (unsafeThrow)
+import Prelude
+import Data.Array as A
+import Data.Array (filter, fromFoldable, replicate, toUnfoldable, (:))
+import Data.CodePoint.Unicode (isAlphaNum)
+import Data.Foldable (maximum)
+import Data.Int (ceil, toNumber)
+import Data.List (transpose)
+import Data.Maybe (fromMaybe)
+import Data.String (codePointFromChar, drop, joinWith, length, take)
+import Data.String.Common (toLower)
+import Data.String.CodeUnits (fromCharArray, toCharArray)
+import Data.Number (sqrt)
 
 normalizedPlaintext :: String -> String
-normalizedPlaintext = unsafeThrow "You need to implement `normalizedPlaintext`."
+normalizedPlaintext
+  = toCharArray
+    >>> filter (isAlphaNum <<< codePointFromChar)
+    >>> fromCharArray
+    >>> toLower
 
 plaintextSegments :: String -> Array String
-plaintextSegments = unsafeThrow "You need to implement `plaintextSegments`."
+plaintextSegments str = toSquare norm
+  where norm = normalizedPlaintext str
+        cols = sqrt (length norm # toNumber) # ceil
+        toSquare "" = []
+        toSquare s  = take cols s : toSquare (drop cols s)
+
+transposeArray :: forall a. Array (Array a) -> Array (Array a)
+transposeArray
+  = toUnfoldable
+    >>> map toUnfoldable
+    >>> transpose
+    >>> map fromFoldable
+    >>> fromFoldable
 
 encoded :: String -> String
-encoded = unsafeThrow "You need to implement `encoded`."
+encoded = plaintextSegments
+          >>> map toCharArray
+          >>> transposeArray
+          >>> map fromCharArray
+          >>> joinWith ""
+
+spaces :: Int -> Array Char
+spaces n = replicate n ' '
+
+equalPad :: Array (Array Char) -> Array (Array Char)
+equalPad arr = map pad arr
+  where width = fromMaybe 0 (maximum $ map A.length arr)
+        pad el = el <> spaces (width - A.length el)
 
 ciphertext :: String -> String
-ciphertext = unsafeThrow "You need to implement `ciphertext`."
+ciphertext = plaintextSegments
+             >>> map toCharArray
+             >>> transposeArray
+             >>> equalPad
+             >>> map fromCharArray
+             >>> joinWith " "
+

@@ -2,8 +2,17 @@ module RnaTranscription
   ( toRNA
   ) where
 
-import Data.Maybe (Maybe)
-import Effect.Exception.Unsafe (unsafeThrow)
+import Prelude
+import Data.Maybe (Maybe(..))
+import Data.String.CodeUnits (fromCharArray, toCharArray)
+import Data.Traversable (traverse)
 
 toRNA :: String -> Maybe String
-toRNA = unsafeThrow "You need to implement this function."
+toRNA dna = fromCharArray <$> traverse complement (toCharArray dna)
+
+complement :: Char -> Maybe Char
+complement 'C' = Just 'G'
+complement 'G' = Just 'C'
+complement 'A' = Just 'U'
+complement 'T' = Just 'A'
+complement _ = Nothing

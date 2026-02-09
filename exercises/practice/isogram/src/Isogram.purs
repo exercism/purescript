@@ -2,7 +2,22 @@ module Isogram
   ( isIsogram
   ) where
 
-import Effect.Exception.Unsafe (unsafeThrow)
+import Prelude
+import Data.Array (filter, foldl)
+import Data.Map (alter, empty, values)
+import Data.Maybe (Maybe(..))
+import Data.String.CodeUnits (toCharArray)
+import Data.String.Common (toLower)
+import Data.Traversable (all)
 
 isIsogram :: String -> Boolean
-isIsogram = unsafeThrow "You need to implement this function."
+isIsogram = toLower
+            >>> toCharArray
+            >>> filter letter
+            >>> foldl toMap empty
+            >>> values
+            >>> all (_ <= 1)
+  where letter c = 'a' <= c && c <= 'z'
+        toMap m c = alter addChar c m
+        addChar Nothing  = Just 1
+        addChar (Just c) = Just $ c + 1

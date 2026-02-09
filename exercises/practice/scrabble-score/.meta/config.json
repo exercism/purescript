@@ -19,8 +19,7 @@
       "examples/src/ScrabbleScore.purs"
     ],
     "invalidator": [
-      "packages.dhall",
-      "spago.dhall"
+      "spago.yaml"
     ]
   },
   "blurb": "Given a word, compute the Scrabble score for that word.",

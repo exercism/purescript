@@ -2,7 +2,22 @@ module Raindrops
   ( raindrops
   ) where
 
-import Effect.Exception.Unsafe (unsafeThrow)
+import Prelude
 
 raindrops :: Int -> String
-raindrops = unsafeThrow "You need to implement this function."
+raindrops n =
+  let
+    fn = toNoise n
+    noises =
+      fn 3 "Pling" <>
+      fn 5 "Plang" <>
+      fn 7 "Plong"
+  in
+    case noises of
+      "" -> show n
+      other -> other
+
+toNoise :: Int -> Int -> String -> String
+toNoise n factor noise
+  | mod n factor == 0 = noise
+  | otherwise = ""

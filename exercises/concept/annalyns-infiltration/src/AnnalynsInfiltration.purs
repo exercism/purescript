@@ -3,13 +3,13 @@ module AnnalynsInfiltration where
 import Prelude
 
 canExecuteFastAttack :: Boolean -> Boolean
-canExecuteFastAttack knightIsAwake = -- You need to implement this function!
+canExecuteFastAttack knightIsAwake = not knightIsAwake
 
 canSpy :: Boolean -> Boolean -> Boolean -> Boolean
-canSpy knightIsAwake archerIsAwake prisonerIsAwake = -- You need to implement this function!
+canSpy knightIsAwake archerIsAwake prisonerIsAwake = knightIsAwake || archerIsAwake || prisonerIsAwake
 
 canSignalPrisoner :: Boolean -> Boolean -> Boolean
-canSignalPrisoner archerIsAwake prisonerIsAwake = -- You need to implement this function!
+canSignalPrisoner archerIsAwake prisonerIsAwake = not archerIsAwake && prisonerIsAwake
 
 canFreePrisoner :: Boolean -> Boolean -> Boolean -> Boolean -> Boolean
-canFreePrisoner knightIsAwake archerIsAwake prisonerIsAwake petDogIsPresent = -- You need to implement this function!
+canFreePrisoner knightIsAwake archerIsAwake prisonerIsAwake petDogIsPresent = not knightIsAwake && not archerIsAwake && prisonerIsAwake || petDogIsPresent && not archerIsAwake
