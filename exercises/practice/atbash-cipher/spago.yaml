@@ -17,6 +17,7 @@ package:
     - partial
     - prelude
     - psci-support
+    - st
     - strings
     - test-unit
     - tuples
