@@ -1,29 +1,28 @@
 #!/usr/bin/env bash
 
-# Ensure all exercises make use of the same package set so that we can build
-# and test the exercise example solutions using a shared `output` directory.
-# Each exercise `packages.dhall` should match the one from the template
-# project.
-
-# For now we just compare the sha256 digest of the `packages.dhall` file itself
-# but this could be switched to compare the output of `spago ls packages` to
-# allow for a bit more flexibility in `packages.dhall`.
+# Ensure all exercises use the same spago.yaml configuration (except for the
+# package name which differs per exercise). We compare the files after stripping
+# the name line.
 
 set -e
 set -o pipefail
 set -u
 
-# We use packages.dhall from the template project as source of truth.
-template_digest=$(openssl dgst -sha256 < ./template/packages.dhall)
+strip_name() {
+    sed '/^  name:/d' "$1"
+}
+
+# We use spago.yaml from the template project as the source of truth.
+template_digest=$(strip_name ./template/spago.yaml | openssl dgst -sha256)
 
 rc=0
 
-for packages_file in ./exercises/{concept,practice}/*/packages.dhall; do
-    exercise_digest=$(openssl dgst -sha256 < "${packages_file}")
+for yaml_file in ./exercises/{concept,practice}/*/spago.yaml; do
+    exercise_digest=$(strip_name "${yaml_file}" | openssl dgst -sha256)
 
     if [ "$template_digest" != "$exercise_digest" ]; then
         rc=1
-        echo "${packages_file} deviates from template"
+        echo "${yaml_file} deviates from template"
     fi
 done
 

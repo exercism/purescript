@@ -19,8 +19,7 @@
       "examples/src/WordCount.purs"
     ],
     "invalidator": [
-      "packages.dhall",
-      "spago.dhall"
+      "spago.yaml"
     ]
   },
   "blurb": "Given a phrase, count the occurrences of each word in that phrase.",

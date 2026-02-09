@@ -32,8 +32,7 @@
       ".meta/Exemplar.purs"
     ],
     "invalidator": [
-      "packages.dhall",
-      "spago.dhall"
+      "spago.yaml"
     ]
   },
   "exercises": {

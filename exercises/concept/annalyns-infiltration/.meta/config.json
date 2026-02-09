@@ -13,8 +13,7 @@
       ".meta/Exemplar.purs"
     ],
     "invalidator": [
-      "packages.dhall",
-      "spago.dhall"
+      "spago.yaml"
     ]
   },
   "forked_from": [

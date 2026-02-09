@@ -19,8 +19,7 @@
       "examples/src/Pangram.purs"
     ],
     "invalidator": [
-      "packages.dhall",
-      "spago.dhall"
+      "spago.yaml"
     ]
   },
   "blurb": "Determine if a sentence is a pangram.",

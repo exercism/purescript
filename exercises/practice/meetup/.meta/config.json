@@ -18,8 +18,7 @@
       "examples/src/Meetup.purs"
     ],
     "invalidator": [
-      "packages.dhall",
-      "spago.dhall"
+      "spago.yaml"
     ]
   },
   "blurb": "Calculate the date of meetups.",

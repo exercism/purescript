@@ -19,8 +19,7 @@
       "examples/src/BinarySearch.purs"
     ],
     "invalidator": [
-      "packages.dhall",
-      "spago.dhall"
+      "spago.yaml"
     ]
   },
   "blurb": "Implement a binary search algorithm.",

@@ -17,8 +17,7 @@
       "examples/src/RnaTranscription.purs"
     ],
     "invalidator": [
-      "packages.dhall",
-      "spago.dhall"
+      "spago.yaml"
     ]
   },
   "blurb": "Given a DNA strand, return its RNA complement.",

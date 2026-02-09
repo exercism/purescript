@@ -11,8 +11,7 @@
       "examples/src/MatchingBrackets.purs"
     ],
     "invalidator": [
-      "packages.dhall",
-      "spago.dhall"
+      "spago.yaml"
     ]
   },
   "blurb": "Make sure the brackets and braces all match.",

@@ -17,8 +17,7 @@
       "examples/src/Isogram.purs"
     ],
     "invalidator": [
-      "packages.dhall",
-      "spago.dhall"
+      "spago.yaml"
     ]
   },
   "blurb": "Determine if a word or phrase is an isogram.",

@@ -18,8 +18,7 @@
       "examples/src/PascalsTriangle.purs"
     ],
     "invalidator": [
-      "packages.dhall",
-      "spago.dhall"
+      "spago.yaml"
     ]
   },
   "blurb": "Compute Pascal's triangle up to a given number of rows.",

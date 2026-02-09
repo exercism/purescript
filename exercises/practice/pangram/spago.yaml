@@ -1,0 +1,31 @@
+package:
+  name: pangram
+  dependencies:
+    - arrays
+    - console
+    - datetime
+    - effect
+    - either
+    - enums
+    - exceptions
+    - foldable-traversable
+    - integers
+    - lists
+    - maybe
+    - numbers
+    - ordered-collections
+    - partial
+    - prelude
+    - psci-support
+    - strings
+    - test-unit
+    - tuples
+    - unfoldable
+    - unicode
+  test:
+    main: Test.Main
+    dependencies: []
+workspace:
+  packageSet:
+    registry: 73.0.0
+  extraPackages: {}

@@ -17,8 +17,7 @@
       "examples/src/CryptoSquare.purs"
     ],
     "invalidator": [
-      "packages.dhall",
-      "spago.dhall"
+      "spago.yaml"
     ]
   },
   "blurb": "Implement the classic method for composing secret messages called a square code.",

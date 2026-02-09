@@ -2,17 +2,9 @@
 
 # Build and test all example solutions.
 #
-# In an ideal world we would just invoke `spago test` in each exercise
-# directory. Each exercise directory is its own project and will pull in the
-# needed dependencies and build them. This works fine but we do a lot of
-# duplicate work and makes this a lengthy operation.
-#
-# Here we optimize this process by downloading and pre-compiling a shared set
-# of package dependencies. This does introduce some additional constraints:
-#
-# - We assume the exercise projects are using the same package-set. The
-#   source-of-truth is in `./template/packages.dhall`. We validate the same
-#   package set is used with `scripts/ci-check`.
+# We optimize by downloading and pre-compiling a shared set of package
+# dependencies once. This requires all exercises to use the same package set,
+# validated by scripts/ci-check.
 
 set -e
 set -u
@@ -22,54 +14,68 @@ base_dir=$(builtin cd "${BASH_SOURCE%/*}/.." || exit; pwd)
 build_dir=${base_dir}/_build
 
 # Pre-compile shared package dependencies
-#
-# Our first order of business is to pre-compile the dependencies. We can then
-# copy the `output` directory to each exercise and spare us from rebuilding the
-# dependencies for each exercise.
-
 if [ -z "${CI+x}" ]; then
-    # When running locally we want start with a clean slate.
+    # When running locally we want to start with a clean slate.
     if [ -d "${build_dir}" ]; then
         echo "Found existing ${build_dir}; removing..."
         rm -rf "${build_dir}"
     fi
 fi
 
-# We use the template exercise project as the source of truth for shared
-# dependencies.
+# We use the template exercise project as the source of truth for shared deps.
 cp -R ./template "${build_dir}"
 pushd "${build_dir}" > /dev/null || exit
 echo "Fetching and compiling shared dependencies..."
-spago --no-psa build --deps-only
+npm install
+npx spago install
 popd > /dev/null || exit
 
-# Iterate over each exercise solution and invoke `spago test`.
-for config in ./exercises/*/*/.solution.dhall; do
-    exercise_dir=$(dirname "${config}")
+# Iterate over each exercise and test its example/exemplar solution.
+for exercise_dir in ./exercises/{concept,practice}/*/; do
+    exercise_dir="${exercise_dir%/}"
+    slug=$(basename "${exercise_dir}")
+
     pushd "${exercise_dir}" > /dev/null || exit
 
     echo ""
     echo "Working in: ${exercise_dir}"
     echo ""
 
+    # Link/copy pre-compiled dependencies
     if [ -h .spago ] || [ -d .spago ]; then
-        echo "Removing existing spago local cache..."
         rm -rf .spago
     fi
-
     ln -s "${build_dir}/.spago" .spago
 
-    if [ -e "output" ]; then
-        echo "Removing existing output..."
+    if [ -e output ]; then
         rm -rf output
     fi
-
-    # We must preserve timestamps else `purs` will invalidate the cache and
-    # force a rebuild.
+    # Preserve timestamps so purs doesn't invalidate the cache.
     cp -R -p "${build_dir}/output" .
 
-    # Build and test the solution
-    spago --no-psa --config .solution.dhall test
+    # Copy node_modules symlink or directory
+    if [ ! -e node_modules ]; then
+        ln -s "${build_dir}/node_modules" node_modules
+    fi
+
+    # Copy example solution over the student stub for testing.
+    # Practice exercises: copy examples/src/*.purs over src/*.purs
+    # Concept exercises: copy .meta/Exemplar.purs over the single src/*.purs file
+    if [ -d "examples/src" ] && ls examples/src/*.purs 1>/dev/null 2>&1; then
+        cp examples/src/*.purs src/
+    elif [ -f ".meta/Exemplar.purs" ]; then
+        # Find the single .purs file in src/ and replace it with the exemplar
+        src_file=$(ls src/*.purs | head -1)
+        cp ".meta/Exemplar.purs" "${src_file}"
+    else
+        echo "ERROR: No example solution found for ${slug}"
+        exit 1
+    fi
+
+    # Build and test. We use --offline since packages are already cached
+    # in .spago/. We don't use --pure because the lockfile has the template
+    # package name, not this exercise's name.
+    npx spago test --offline
 
     popd > /dev/null || exit
 done
