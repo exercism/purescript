@@ -6,7 +6,6 @@
 # dependencies once. This requires all exercises to use the same package set,
 # validated by scripts/ci-check.
 
-set -e
 set -u
 set -o pipefail
 
@@ -31,6 +30,8 @@ npx spago install
 popd > /dev/null || exit
 
 # Iterate over each exercise and test its example/exemplar solution.
+rc=0
+
 for exercise_dir in ./exercises/{concept,practice}/*/; do
     exercise_dir="${exercise_dir%/}"
     slug=$(basename "${exercise_dir}")
@@ -41,41 +42,54 @@ for exercise_dir in ./exercises/{concept,practice}/*/; do
     echo "Working in: ${exercise_dir}"
     echo ""
 
-    # Link/copy pre-compiled dependencies
-    if [ -h .spago ] || [ -d .spago ]; then
+    # Link/copy pre-compiled dependencies (clean up any existing artifacts)
+    if [[ -h .spago ]] || [[ -d .spago ]]; then
         rm -rf .spago
     fi
     ln -s "${build_dir}/.spago" .spago
 
-    if [ -e output ]; then
+    if [[ -e output ]]; then
         rm -rf output
     fi
     # Preserve timestamps so purs doesn't invalidate the cache.
     cp -R -p "${build_dir}/output" .
 
-    # Copy node_modules symlink or directory
-    if [ ! -e node_modules ]; then
-        ln -s "${build_dir}/node_modules" node_modules
+    if [[ -h node_modules ]] || [[ -d node_modules ]]; then
+        rm -rf node_modules
     fi
+    ln -s "${build_dir}/node_modules" node_modules
 
     # Copy example solution over the student stub for testing.
     # Practice exercises: copy examples/src/*.purs over src/*.purs
     # Concept exercises: copy .meta/Exemplar.purs over the single src/*.purs file
-    if [ -d "examples/src" ] && ls examples/src/*.purs 1>/dev/null 2>&1; then
+    if [[ "$exercise_dir" == ./exercises/practice/* ]]; then
+        files=( examples/src/*.purs )
+        if ! [[ -f ${files[0]} ]]; then
+            echo "ERROR: No example solution found for practice exercise ${slug}"
+            rc=1
+            popd > /dev/null || exit
+            continue
+        fi
         cp examples/src/*.purs src/
-    elif [ -f ".meta/Exemplar.purs" ]; then
-        # Find the single .purs file in src/ and replace it with the exemplar
-        src_file=$(ls src/*.purs | head -1)
-        cp ".meta/Exemplar.purs" "${src_file}"
     else
-        echo "ERROR: No example solution found for ${slug}"
-        exit 1
+        if ! [[ -f ".meta/Exemplar.purs" ]]; then
+            echo "ERROR: No exemplar solution found for concept exercise ${slug}"
+            rc=1
+            popd > /dev/null || exit
+            continue
+        fi
+        src_file=( src/*.purs )
+        cp ".meta/Exemplar.purs" "${src_file[0]}"
     fi
 
     # Build and test. We use --offline since packages are already cached
     # in .spago/. We don't use --pure because the lockfile has the template
     # package name, not this exercise's name.
-    npx spago test --offline
+    if ! npx spago test --offline; then
+        rc=1
+    fi
 
     popd > /dev/null || exit
 done
+
+exit $rc
