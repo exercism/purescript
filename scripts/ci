@@ -34,7 +34,7 @@ rc=0
 
 for exercise_dir in ./exercises/{concept,practice}/*/; do
     exercise_dir="${exercise_dir%/}"
-    slug=$(basename "${exercise_dir}")
+    slug="${exercise_dir##*/}"
 
     pushd "${exercise_dir}" > /dev/null || exit
 
@@ -43,7 +43,7 @@ for exercise_dir in ./exercises/{concept,practice}/*/; do
     echo ""
 
     # Link/copy pre-compiled dependencies (clean up any existing artifacts)
-    if [[ -h .spago ]] || [[ -d .spago ]]; then
+    if [[ -h .spago || -d .spago ]]; then
         rm -rf .spago
     fi
     ln -s "${build_dir}/.spago" .spago
@@ -54,7 +54,7 @@ for exercise_dir in ./exercises/{concept,practice}/*/; do
     # Preserve timestamps so purs doesn't invalidate the cache.
     cp -R -p "${build_dir}/output" .
 
-    if [[ -h node_modules ]] || [[ -d node_modules ]]; then
+    if [[ -h node_modules || -d node_modules ]]; then
         rm -rf node_modules
     fi
     ln -s "${build_dir}/node_modules" node_modules
@@ -64,15 +64,15 @@ for exercise_dir in ./exercises/{concept,practice}/*/; do
     # Concept exercises: copy .meta/Exemplar.purs over the single src/*.purs file
     if [[ "$exercise_dir" == ./exercises/practice/* ]]; then
         files=( examples/src/*.purs )
-        if ! [[ -f ${files[0]} ]]; then
+        if [[ ! -f ${files[0]} ]]; then
             echo "ERROR: No example solution found for practice exercise ${slug}"
             rc=1
             popd > /dev/null || exit
             continue
         fi
-        cp examples/src/*.purs src/
+        cp "${files[@]}" src/
     else
-        if ! [[ -f ".meta/Exemplar.purs" ]]; then
+        if [[ ! -f ".meta/Exemplar.purs" ]]; then
             echo "ERROR: No exemplar solution found for concept exercise ${slug}"
             rc=1
             popd > /dev/null || exit
@@ -92,4 +92,4 @@ for exercise_dir in ./exercises/{concept,practice}/*/; do
     popd > /dev/null || exit
 done
 
-exit $rc
+exit "$rc"

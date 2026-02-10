@@ -10,9 +10,9 @@ set -u
 base_dir=$(builtin cd "${BASH_SOURCE%/*}/.." || exit; pwd)
 template_dir="${base_dir}/template"
 
-for exercise_dir in "$base_dir"/exercises/*/*; do
-    [[ -d "${exercise_dir}" ]] || continue
-    slug=$(basename "${exercise_dir}")
+for exercise_dir in "$base_dir"/exercises/*/*/; do
+    exercise_dir="${exercise_dir%/}"
+    slug="${exercise_dir##*/}"
 
     echo "Working in ${exercise_dir}..."
 
