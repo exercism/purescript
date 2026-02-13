@@ -13,8 +13,7 @@
       "examples/src/SpiralMatrix.purs"
     ],
     "invalidator": [
-      "packages.dhall",
-      "spago.dhall"
+      "spago.yaml"
     ]
   },
   "blurb": "Given the size, return a square matrix of numbers in spiral order.",

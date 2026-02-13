@@ -19,8 +19,7 @@
       "examples/src/Bob.purs"
     ],
     "invalidator": [
-      "packages.dhall",
-      "spago.dhall"
+      "spago.yaml"
     ]
   },
   "blurb": "Bob is a lackadaisical teenager. In conversation, his responses are very limited.",

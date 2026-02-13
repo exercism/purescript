@@ -18,8 +18,7 @@
       "examples/src/Triangle.purs"
     ],
     "invalidator": [
-      "packages.dhall",
-      "spago.dhall"
+      "spago.yaml"
     ]
   },
   "blurb": "Determine if a triangle is equilateral, isosceles, or scalene.",

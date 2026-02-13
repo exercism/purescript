@@ -1,0 +1,32 @@
+package:
+  name: largest-series-product
+  dependencies:
+    - arrays
+    - console
+    - datetime
+    - effect
+    - either
+    - enums
+    - exceptions
+    - foldable-traversable
+    - integers
+    - lists
+    - maybe
+    - numbers
+    - ordered-collections
+    - partial
+    - prelude
+    - psci-support
+    - st
+    - strings
+    - test-unit
+    - tuples
+    - unfoldable
+    - unicode
+  test:
+    main: Test.Main
+    dependencies: []
+workspace:
+  packageSet:
+    registry: 73.0.0
+  extraPackages: {}

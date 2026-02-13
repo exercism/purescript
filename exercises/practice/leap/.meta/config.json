@@ -18,8 +18,7 @@
       "examples/src/Leap.purs"
     ],
     "invalidator": [
-      "packages.dhall",
-      "spago.dhall"
+      "spago.yaml"
     ]
   },
   "blurb": "Determine whether a given year is a leap year.",

@@ -19,8 +19,7 @@
       "examples/src/AllYourBase.purs"
     ],
     "invalidator": [
-      "packages.dhall",
-      "spago.dhall"
+      "spago.yaml"
     ]
   },
   "blurb": "Convert a number, represented as a sequence of digits in one base, to any other base."
