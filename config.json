@@ -62,26 +62,26 @@
         ]
       },
       {
-        "slug": "leap",
-        "name": "Leap",
-        "uuid": "1a95beb7-5bb2-44c4-aee7-5790bcb38865",
+        "slug": "accumulate",
+        "name": "Accumulate",
+        "uuid": "d530077b-1eed-44cd-9791-5f78001c7372",
         "practices": [],
         "prerequisites": [],
         "difficulty": 1,
         "topics": [
-          "booleans",
-          "modulo"
+          "pattern_matching",
+          "recursion",
+          "type_variables"
         ]
       },
       {
-        "slug": "pangram",
-        "name": "Pangram",
-        "uuid": "aaf7a72c-ada0-4e43-8cc1-78d9e60ee151",
+        "slug": "atbash-cipher",
+        "name": "Atbash Cipher",
+        "uuid": "d077a175-2219-439c-9bfa-3098239e4cd6",
         "practices": [],
         "prerequisites": [],
         "difficulty": 1,
         "topics": [
-          "chars",
           "strings"
         ]
       },
@@ -97,19 +97,6 @@
         ]
       },
       {
-        "slug": "accumulate",
-        "name": "Accumulate",
-        "uuid": "d530077b-1eed-44cd-9791-5f78001c7372",
-        "practices": [],
-        "prerequisites": [],
-        "difficulty": 1,
-        "topics": [
-          "pattern_matching",
-          "recursion",
-          "type_variables"
-        ]
-      },
-      {
         "slug": "collatz-conjecture",
         "name": "Collatz Conjecture",
         "uuid": "b2d299f3-c382-4271-bd9e-f9d5615e5403",
@@ -120,43 +107,6 @@
           "arithmetics",
           "math",
           "maybe"
-        ]
-      },
-      {
-        "slug": "rna-transcription",
-        "name": "RNA Transcription",
-        "uuid": "b7648fa5-1aff-477c-973c-079245060d73",
-        "practices": [],
-        "prerequisites": [],
-        "difficulty": 1,
-        "topics": [
-          "maybe",
-          "strings"
-        ]
-      },
-      {
-        "slug": "sum-of-multiples",
-        "name": "Sum of Multiples",
-        "uuid": "a686d00c-4dd4-4208-88c9-d17b00d97b28",
-        "practices": [],
-        "prerequisites": [],
-        "difficulty": 1,
-        "topics": [
-          "arithmetics",
-          "arrays",
-          "math",
-          "modulo"
-        ]
-      },
-      {
-        "slug": "atbash-cipher",
-        "name": "Atbash Cipher",
-        "uuid": "d077a175-2219-439c-9bfa-3098239e4cd6",
-        "practices": [],
-        "prerequisites": [],
-        "difficulty": 1,
-        "topics": [
-          "strings"
         ]
       },
       {
@@ -195,6 +145,30 @@
         ]
       },
       {
+        "slug": "leap",
+        "name": "Leap",
+        "uuid": "1a95beb7-5bb2-44c4-aee7-5790bcb38865",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 1,
+        "topics": [
+          "booleans",
+          "modulo"
+        ]
+      },
+      {
+        "slug": "pangram",
+        "name": "Pangram",
+        "uuid": "aaf7a72c-ada0-4e43-8cc1-78d9e60ee151",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 1,
+        "topics": [
+          "chars",
+          "strings"
+        ]
+      },
+      {
         "slug": "phone-number",
         "name": "Phone Number",
         "uuid": "09a9ab8e-acaf-4f3d-96ff-789321a53785",
@@ -219,6 +193,18 @@
         ]
       },
       {
+        "slug": "rna-transcription",
+        "name": "RNA Transcription",
+        "uuid": "b7648fa5-1aff-477c-973c-079245060d73",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 1,
+        "topics": [
+          "maybe",
+          "strings"
+        ]
+      },
+      {
         "slug": "scrabble-score",
         "name": "Scrabble Score",
         "uuid": "c956e70b-4e34-451b-9374-19b9f2aefa37",
@@ -228,6 +214,20 @@
         "topics": [
           "chars",
           "strings"
+        ]
+      },
+      {
+        "slug": "sum-of-multiples",
+        "name": "Sum of Multiples",
+        "uuid": "a686d00c-4dd4-4208-88c9-d17b00d97b28",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 1,
+        "topics": [
+          "arithmetics",
+          "arrays",
+          "math",
+          "modulo"
         ]
       },
       {
@@ -289,6 +289,18 @@
         ]
       },
       {
+        "slug": "all-your-base",
+        "name": "All Your Base",
+        "uuid": "79011a26-c8b8-4fea-bdce-f8e3d37bee23",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 4,
+        "topics": [
+          "base_conversion",
+          "math"
+        ]
+      },
+      {
         "slug": "anagram",
         "name": "Anagram",
         "uuid": "cd68e41a-31a3-4594-a1ea-7e52e2f2468e",
@@ -299,18 +311,6 @@
           "filtering",
           "lists",
           "strings"
-        ]
-      },
-      {
-        "slug": "all-your-base",
-        "name": "All Your Base",
-        "uuid": "79011a26-c8b8-4fea-bdce-f8e3d37bee23",
-        "practices": [],
-        "prerequisites": [],
-        "difficulty": 4,
-        "topics": [
-          "base_conversion",
-          "math"
         ]
       },
       {
@@ -350,6 +350,26 @@
         ]
       },
       {
+        "slug": "crypto-square",
+        "name": "Crypto Square",
+        "uuid": "e4f49f2e-87bd-4506-9184-d90bec0adde5",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 5,
+        "topics": [
+          "matrices",
+          "strings"
+        ]
+      },
+      {
+        "slug": "knapsack",
+        "name": "Knapsack",
+        "uuid": "7a970ee7-7ef9-442b-92d5-4784e7c6fcd1",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 5
+      },
+      {
         "slug": "matching-brackets",
         "name": "Matching Brackets",
         "uuid": "dd60d894-9bab-4d53-96a2-11e77aa3e7f8",
@@ -361,16 +381,12 @@
         ]
       },
       {
-        "slug": "crypto-square",
-        "name": "Crypto Square",
-        "uuid": "e4f49f2e-87bd-4506-9184-d90bec0adde5",
+        "slug": "spiral-matrix",
+        "name": "Spiral Matrix",
+        "uuid": "2ff7b482-04c5-42cd-b589-98cd7cd462f7",
         "practices": [],
         "prerequisites": [],
-        "difficulty": 5,
-        "topics": [
-          "matrices",
-          "strings"
-        ]
+        "difficulty": 5
       },
       {
         "slug": "word-count",
@@ -395,22 +411,6 @@
         "topics": [
           "dates"
         ]
-      },
-      {
-        "slug": "spiral-matrix",
-        "name": "Spiral Matrix",
-        "uuid": "2ff7b482-04c5-42cd-b589-98cd7cd462f7",
-        "practices": [],
-        "prerequisites": [],
-        "difficulty": 5
-      },
-      {
-        "slug": "knapsack",
-        "name": "Knapsack",
-        "uuid": "7a970ee7-7ef9-442b-92d5-4784e7c6fcd1",
-        "practices": [],
-        "prerequisites": [],
-        "difficulty": 5
       }
     ]
   },
