@@ -40,8 +40,7 @@ All exercises live in `exercises` folder. Here's the standard folder structure:
 │  └─ <ExerciseName>.purs
 ├─ test
 │  └─ Main.purs
-├─ packages.dhall
-└─ spago.dhall
+└─ spago.yaml
 ```
 
 Creating a new exercise requires modification to:
@@ -54,9 +53,8 @@ Creating a new exercise requires modification to:
 The remaining files:
 
 - `test/Main.purs` - contains tests
-- `spago.dhall` and `packages.dhall` - these are copied from the template
-  project `template/*.dhall` and should not be directly modified (see the
-  following section)
+- `spago.yaml` - copied from the template project and should not be directly
+  modified (see the following section)
 
 #### Steps for adding a new exercise
 
@@ -68,7 +66,7 @@ The remaining files:
 - Add exercise details to `config.json`
 - Add tests to `test/Main.purs`
 - Add your solution to `examples/src/<ExerciseName>.purs`
-- Run `bin/test.sh` to make sure all tests pass
+- Run `scripts/ci` to make sure all tests pass
 - Commit, push and make a pull request
 - Check that GitHub CI passes
 
