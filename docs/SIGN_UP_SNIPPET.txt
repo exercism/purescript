@@ -1,0 +1,9 @@
+mostCommonWord :: String -> String
+mostCommonWord text =
+  let
+    words = split (Pattern " ") (toLower text)
+    counts = foldl (\m word -> Map.insertWith (+) word 1 m) Map.empty words
+    count word = fromMaybe 0 (Map.lookup word counts)
+    best = foldl (\b word -> if count word > count b then word else b) "" words
+  in
+    "\"" <> best <> "\" appears " <> show (count best) <> " times"
